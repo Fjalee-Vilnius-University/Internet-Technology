@@ -1,72 +1,72 @@
 {
   "planet": {
-    "-name": "Earth",
+    "name": "Earth",
     "continent": {
-      "-name": "Europe",
+      "name": "Europe",
       "country": {
-        "-name": "Lithuania",
-        "-currency": "Euro",
+        "name": "Lithuania",
+        "currency": "Euro",
         "water": {
-          "-type": "river",
-          "-name": "Nemunas"
+          "type": "river",
+          "name": "Nemunas"
         },
         "municipality": [
           {
-            "-name": "Vilnius",
+            "name": "Vilnius",
             "city": {
-              "-name": "Vilnius",
+              "name": "Vilnius",
               "microdisctrict": {
-                "-name": "Naujamiestis",
+                "name": "Naujamiestis",
                 "street": {
-                  "-name": "Naugarduko",
+                  "name": "Naugarduko",
                   "building": {
-                    "-name": "VU-matematikos-ir-informatikos-fakultetas",
-                    "-number": "24",
-                    "-added": "2018-01-09"
+                    "name": "VU-matematikos-ir-informatikos-fakultetas",
+                    "number": "24",
+                    "added": "2018-01-09"
                   }
                 }
               }
             }
           },
           {
-            "-name": "Moletai",
-            "-density": "14.07",
-            "-population": "19233",
+            "name": "Moletai",
+            "density": "14.07",
+            "population": "19233",
             "city": {
-              "-name": "Dubingiai",
+              "name": "Dubingiai",
               "park": {
-                "-type": "regional",
-                "-name": "Asveja",
+                "type": "regional",
+                "name": "Asveja",
                 "water": {
-                  "-type": "lake",
-                  "-name": "Asveja",
+                  "type": "lake",
+                  "name": "Asveja",
                   "land": {
-                    "-type": "peninsula",
-                    "-name": "dubingiu-piliaviete"
+                    "type": "peninsula",
+                    "name": "dubingiu-piliaviete"
                   }
                 }
               }
             }
           },
           {
-            "-name": "Trakai",
+            "name": "Trakai",
             "city": {
-              "-name": "Trakai",
+              "name": "Trakai",
               "park": {
-                "-type": "national",
-                "-name": "Trakai-historical",
+                "type": "national",
+                "name": "Trakai-historical",
                 "forest": {
-                  "-name": "Kudrionio",
+                  "name": "Kudrionio",
                   "water": {
-                    "-type": "lake",
-                    "-name": "Galves",
+                    "type": "lake",
+                    "name": "Galves",
                     "land": {
-                      "-type": "island",
-                      "-name": "Traku",
+                      "type": "island",
+                      "name": "Traku",
                       "building": {
-                        "-type": "museum",
-                        "-architecture": "gothic",
-                        "-name": "traku-pilis"
+                        "type": "museum",
+                        "architecture": "gothic",
+                        "name": "traku-pilis"
                       }
                     }
                   }
@@ -78,8 +78,8 @@
       }
     },
     "water": {
-      "-type": "ocean",
-      "-name": "pacific"
+      "type": "ocean",
+      "name": "pacific"
     }
   }
 }
