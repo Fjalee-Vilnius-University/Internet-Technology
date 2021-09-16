@@ -1,30 +1,30 @@
 {
-  "planet": {
+  "http://klevas.mif.vu.lt/~ryce6320:planet": {
     "name": "Earth",
-    "continent": {
+    "http://klevas.mif.vu.lt/~ryce6320:continent": {
       "name": "Europe",
       "xlmns:continent": "Europe",
-      "country": {
+      "http://klevas.mif.vu.lt/~ryce6320:country": {
         "name": "Lithuania",
         "currency": "Euro",
         "xlmns:country": "Lithuania",
-        "water": {
+        "http://klevas.mif.vu.lt/~ryce6320:water": {
           "type": "river",
           "name": "Nemunas",
           "length": "937",
           "Lithuania:place-by-length": "1",
           "Europe:place-by-length": "197"
         },
-        "municipality": [
+        "http://klevas.mif.vu.lt/~ryce6320:municipality": [
           {
             "name": "Vilnius",
-            "city": {
+            "http://klevas.mif.vu.lt/~ryce6320:city": {
               "name": "Vilnius",
-              "microdisctrict": {
+              "http://klevas.mif.vu.lt/~ryce6320:microdisctrict": {
                 "name": "Naujamiestis",
-                "street": {
+                "http://klevas.mif.vu.lt/~ryce6320:street": {
                   "name": "Naugarduko",
-                  "building": {
+                  "http://klevas.mif.vu.lt/~ryce6320:building": {
                     "name": "VU-matematikos-ir-informatikos-fakultetas",
                     "number": "24",
                     "added": "2018-01-09"
@@ -37,15 +37,15 @@
             "name": "Moletai",
             "density": "14.07",
             "population": "19233",
-            "city": {
+            "http://klevas.mif.vu.lt/~ryce6320:city": {
               "name": "Dubingiai",
-              "park": {
+              "http://klevas.mif.vu.lt/~ryce6320:park": {
                 "type": "regional",
                 "name": "Asveja",
-                "water": {
+                "http://klevas.mif.vu.lt/~ryce6320:water": {
                   "type": "lake",
                   "name": "Asveja",
-                  "land": {
+                  "http://klevas.mif.vu.lt/~ryce6320:land": {
                     "type": "peninsula",
                     "name": "dubingiu-piliaviete"
                   }
@@ -55,20 +55,20 @@
           },
           {
             "name": "Trakai",
-            "city": {
+            "http://klevas.mif.vu.lt/~ryce6320:city": {
               "name": "Trakai",
-              "park": {
+              "http://klevas.mif.vu.lt/~ryce6320:park": {
                 "type": "national",
                 "name": "Trakai-historical",
-                "forest": {
+                "http://klevas.mif.vu.lt/~ryce6320:forest": {
                   "name": "Kudrionio",
-                  "water": {
+                  "http://klevas.mif.vu.lt/~ryce6320:water": {
                     "type": "lake",
                     "name": "Galves",
-                    "land": {
+                    "http://klevas.mif.vu.lt/~ryce6320:land": {
                       "type": "island",
                       "name": "Traku",
-                      "building": {
+                      "http://klevas.mif.vu.lt/~ryce6320:building": {
                         "type": "museum",
                         "architecture": "gothic",
                         "name": "traku-pilis"
@@ -82,7 +82,7 @@
         ]
       }
     },
-    "water": {
+    "http://klevas.mif.vu.lt/~ryce6320:water": {
       "type": "ocean",
       "name": "pacific"
     }

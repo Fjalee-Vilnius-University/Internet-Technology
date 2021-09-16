@@ -1,4 +1,4 @@
-<planet name="Earth">
+<planet name="Earth" xlmns="http://klevas.mif.vu.lt/~ryce6320">
     <continent name="Europe" xlmns:continent="Europe">
         <country name="Lithuania" currency="Euro" xlmns:country="Lithuania">
             <water type="river" name="Nemunas" length="937" country:place-by-length="1" continent:place-by-length="197"/>
