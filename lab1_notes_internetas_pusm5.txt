@@ -22,6 +22,9 @@ Atributai
     population - int
     added - date
 
+Namespace
+    <river name="Nemunas">
+
 
 
 

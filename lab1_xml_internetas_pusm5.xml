@@ -1,7 +1,7 @@
 <planet name="Earth">
-    <continent name="Europe">
-        <country name="Lithuania" currency="Euro">
-            <water type="river" name="Nemunas"/>
+    <continent name="Europe" xlmns:continent="Europe">
+        <country name="Lithuania" currency="Euro" xlmns:country="Lithuania">
+            <water type="river" name="Nemunas" length="937" country:place-by-length="1" continent:place-by-length="197"/>
 
             <municipality name="Vilnius">
                 <city name="Vilnius">

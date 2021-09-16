@@ -3,12 +3,17 @@
     "name": "Earth",
     "continent": {
       "name": "Europe",
+      "xlmns:continent": "Europe",
       "country": {
         "name": "Lithuania",
         "currency": "Euro",
+        "xlmns:country": "Lithuania",
         "water": {
           "type": "river",
-          "name": "Nemunas"
+          "name": "Nemunas",
+          "length": "937",
+          "Lithuania:place-by-length": "1",
+          "Europe:place-by-length": "197"
         },
         "municipality": [
           {
