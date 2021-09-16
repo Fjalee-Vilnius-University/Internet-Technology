@@ -1,0 +1,85 @@
+{
+  "planet": {
+    "name": "Earth",
+    "continent": {
+      "name": "Europe",
+      "country": {
+        "name": "Lithuania",
+        "currency": "Euro",
+        "water": {
+          "type": "river",
+          "name": "Nemunas"
+        },
+        "municipality": [
+          {
+            "name": "Vilnius",
+            "city": {
+              "name": "Vilnius",
+              "microdisctrict": {
+                "name": "Naujamiestis",
+                "street": {
+                  "name": "Naugarduko",
+                  "building": {
+                    "name": "VU-matematikos-ir-informatikos-fakultetas",
+                    "number": "24",
+                    "added": "2018-01-09"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "Moletai",
+            "density": "14.07",
+            "population": "19233",
+            "city": {
+              "name": "Dubingiai",
+              "park": {
+                "type": "regional",
+                "name": "Asveja",
+                "water": {
+                  "type": "lake",
+                  "name": "Asveja",
+                  "land": {
+                    "type": "peninsula",
+                    "name": "dubingiu-piliaviete"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "name": "Trakai",
+            "city": {
+              "name": "Trakai",
+              "park": {
+                "type": "national",
+                "name": "Trakai-historical",
+                "forest": {
+                  "name": "Kudrionio",
+                  "water": {
+                    "type": "lake",
+                    "name": "Galves",
+                    "land": {
+                      "type": "island",
+                      "name": "Traku",
+                      "building": {
+                        "type": "museum",
+                        "architecture": "gothic",
+                        "name": "traku-pilis"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "water": {
+      "type": "ocean",
+      "name": "pacific"
+    }
+  }
+}
