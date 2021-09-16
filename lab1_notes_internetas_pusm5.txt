@@ -1,0 +1,33 @@
+Zymes
+    <planet>
+
+    <land>
+    <water>
+
+    <continent>
+    <country>
+    <municipality>
+    <city>
+    <microdisctrict>
+    <street>
+    <building>
+
+    <forest>
+    <park>
+    <area>
+
+Atributai
+    name - string
+    density - double
+    population - int
+    added - date
+
+
+
+
+
+
+REIKALAVIMAI
+    Visos dokumento žymės privalo priklausyti jūsų susikurtai vardų galiojimo sričiai, atributai neturi priklausyti jokiai vardų sričiai.
+    Būtina panaudoti tiek vardų srities pagal nutylėjimą žymėjimą, tiek išreikštinį vardų srities nurodymą - su prefiksu (t.y., daliai dokumento žymių nurodykite vardų sritį pagal nutylėjimą, daliai vardų sritį nurodykite išreikštinai)
+    XML -> JSON 
