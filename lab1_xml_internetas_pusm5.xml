@@ -7,7 +7,7 @@
                 <city name="Trakai">
                     <park type="national" name="Trakai-historical">
                         <forest name="Kudrionio">
-                            <water type="lake" name="Trakai-historical">
+                            <water type="lake" name="Galves">
                                 <land type="island" name="Traku">
                                     <building type="museum" architecture="gothic" name="traku-pilis"/>
                                 </land>
@@ -45,7 +45,7 @@
 XPath
     1.
         //park[@name="Trakai-historical"]
-
+        
         ancestor -                 //park[@name="Trakai-historical"]/ancestor::city/@name
         descendant -               //park[@name="Trakai-historical"]/descendant::building/@name
         following-sibling -        //park[@name="Trakai-historical"]/following-sibling::park
@@ -53,4 +53,9 @@ XPath
         following -                //park[@name="Trakai-historical"]/following::city/park
         preceding -                //park[@name="Trakai-historical"]/preceding::*
         attribute -                //park[@name="Trakai-historical"]/attribute::type
-        
+    
+    2.
+        //*[@architecture=//building[@name="traku-pilis"]/@architecture]
+            //*[@architecture=//building[]
+            //building[@name="traku-pilis"]/@architecture
+    
