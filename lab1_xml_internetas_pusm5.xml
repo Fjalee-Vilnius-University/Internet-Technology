@@ -3,6 +3,20 @@
         <country name="Lithuania" currency="Euro" xlmns:country="Lithuania">
             <water type="river" name="Nemunas" length="937" country:place-by-length="1" continent:place-by-length="197"/>
 
+            <municipality name="Trakai">
+                <city name="Trakai">
+                    <park type="national" name="Trakai-historical">
+                        <forest name="Kudrionio">
+                            <water type="lake" name="Trakai-historical">
+                                <land type="island" name="Traku">
+                                    <building type="museum" architecture="gothic" name="traku-pilis"/>
+                                </land>
+                            </water>
+                        </forest>
+                    </park>
+                </city>
+            </municipality>
+
             <municipality name="Vilnius">
                 <city name="Vilnius">
                     <microdisctrict name="Naujamiestis">
@@ -22,22 +36,21 @@
                     </park>
                 </city>
             </municipality>
-            
-            <municipality name="Trakai">
-                <city name="Trakai">
-                    <park type="national" name="Trakai-historical">
-                        <forest name="Kudrionio">
-                            <water type="lake" name="Galves">
-                                <land type="island" name="Traku">
-                                    <building type="museum" architecture="gothic" name="traku-pilis"/>
-                                </land>
-                            </water>
-                        </forest>
-                    </park>
-                </city>
-            </municipality>
 
         </country>
     </continent>
     <water type="ocean" name="pacific"/>
 </planet>
+
+XPath
+    1.
+        //park[@name="Trakai-historical"]
+
+        ancestor -                 //park[@name="Trakai-historical"]/ancestor::city/@name
+        descendant -               //park[@name="Trakai-historical"]/descendant::building/@name
+        following-sibling -        //park[@name="Trakai-historical"]/following-sibling::park
+        preceding-sibling -        //park[@name="Trakai-historical"]/preceding-sibling::park
+        following -                //park[@name="Trakai-historical"]/following::city/park
+        preceding -                //park[@name="Trakai-historical"]/preceding::*
+        attribute -                //park[@name="Trakai-historical"]/attribute::type
+        

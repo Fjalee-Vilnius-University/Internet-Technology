@@ -24,3 +24,60 @@ Atributai
 
 Namespace
     <river name="Nemunas">
+
+
+
+
+
+
+
+
+
+
+
+
+
+XML for Xpath calc
+    <planet name="Earth">
+    <continent name="Europe">
+        <country name="Lithuania" currency="Euro">
+            <water type="river" name="Nemunas" length="937"/>
+            
+            <municipality name="Trakai">
+                <city name="Trakai">
+                    <park type="national" name="Trakai-historical">
+                        <forest name="Kudrionio">
+                            <water type="lake" name="Galves">
+                                <land type="island" name="Traku">
+                                    <building type="museum" architecture="gothic" name="traku-pilis"/>
+                                </land>
+                            </water>
+                        </forest>
+                    </park>
+                </city>
+            </municipality>
+
+            <municipality name="Vilnius">
+                <city name="Vilnius">
+                    <microdisctrict name="Naujamiestis">
+                        <street name="Naugarduko">
+                            <building name="VU-matematikos-ir-informatikos-fakultetas" number="24" added="2018-01-09"/>
+                        </street>
+                    </microdisctrict>
+                </city> 
+            </municipality>
+
+            <municipality name="Moletai" density="14.07" population="19233">
+                <city name="Dubingiai">
+                    <park type="regional" name="Asveja">
+                        <water type="lake" name="Asveja">
+                            <land type="peninsula" name="dubingiu-piliaviete"/>
+                        </water>
+                    </park>
+                </city>
+            </municipality>
+
+        </country>
+    </continent>
+    <water type="ocean" name="pacific"/>
+</planet>
