@@ -70,3 +70,69 @@ XPath
         //municipality[@name="Vilnius"]/@population > //municipality[@name="Trakai"]/@population
         //building[@name="Vilnius-Cathedral"]/@architecture = //building[@name="traku-pilis"]/@architecture
         //municipality[@name="Vilnius"]/@population + //municipality[@name="Trakai"]/@population
+    5.
+        //municipality[parent::country[@name="Lithuania"]]/city[@name="Vilnius"]/microdisctrict
+            //municipality[parent::country[@name="Lithuania"]]
+                <municipality name="Trakai" population="4141">
+                    <city name="Trakai">
+                        <park type="national" name="Trakai-historical">
+                            <forest name="Kudrionio">
+                                <water type="lake" name="Galves">
+                                    <land type="island" name="Traku">
+                                        <building type="museum" architecture="gothic" name="traku-pilis"/>
+                                    </land>
+                                </water>
+                            </forest>
+                        </park>
+                    </city>
+                </municipality>
+
+                <municipality name="Vilnius" population="544386">
+                    <city name="Vilnius">
+                        <microdisctrict name="Naujamiestis">
+                            <street name="Naugarduko">
+                                <building name="VU-matematikos-ir-informatikos-fakultetas" number="24" added="2018-01-09"/>
+                            </street>
+                        </microdisctrict>
+                        <microdisctrict name="Senamiestis">
+                            <street name="Sventaragio">
+                                <building name="Vilnius-Cathedral" type="church" architecture="gothic" added="2016-01-02"/>
+                            </street>
+                        </microdisctrict>
+                    </city> 
+                </municipality>
+
+                <municipality name="Moletai" density="14.07" population="19233">
+                    <city name="Dubingiai">
+                        <park type="regional" name="Asveja">
+                            <water type="lake" name="Asveja">
+                                <land type="peninsula" name="dubingiu-piliaviete"/>
+                            </water>
+                        </park>
+                    </city>
+                </municipality>
+            /city[@name="Vilnius"]
+                    <city name="Vilnius">
+                        <microdisctrict name="Naujamiestis">
+                            <street name="Naugarduko">
+                                <building name="VU-matematikos-ir-informatikos-fakultetas" number="24" added="2018-01-09"/>
+                            </street>
+                        </microdisctrict>
+                        <microdisctrict name="Senamiestis">
+                            <street name="Sventaragio">
+                                <building name="Vilnius-Cathedral" type="church" architecture="gothic" added="2016-01-02"/>
+                            </street>
+                        </microdisctrict>
+                    </city> 
+            /microdisctrict
+                    <microdisctrict name="Naujamiestis">
+                        <street name="Naugarduko">
+                            <building name="VU-matematikos-ir-informatikos-fakultetas" number="24" added="2018-01-09"/>
+                        </street>
+                    </microdisctrict>
+
+                    <microdisctrict name="Senamiestis">
+                        <street name="Sventaragio">
+                            <building name="Vilnius-Cathedral" type="church" architecture="gothic" added="2016-01-02"/>
+                        </street>
+                    </microdisctrict>
