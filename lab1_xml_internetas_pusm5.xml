@@ -3,7 +3,7 @@
         <country name="Lithuania" currency="Euro" xlmns:country="Lithuania">
             <water type="river" name="Nemunas" length="937" country:place-by-length="1" continent:place-by-length="197"/>
 
-            <municipality name="Trakai">
+            <municipality name="Trakai" population="4141">
                 <city name="Trakai">
                     <park type="national" name="Trakai-historical">
                         <forest name="Kudrionio">
@@ -17,7 +17,7 @@
                 </city>
             </municipality>
 
-            <municipality name="Vilnius">
+            <municipality name="Vilnius" population="544386">
                 <city name="Vilnius">
                     <microdisctrict name="Naujamiestis">
                         <street name="Naugarduko">
@@ -58,4 +58,8 @@ XPath
         //*[@architecture=//building[@name="traku-pilis"]/@architecture]
             //*[@architecture=//building[]
             //building[@name="traku-pilis"]/@architecture
+    3.
+        count(//city)
+        sum(//municipality/@population)
+
     
