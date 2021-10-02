@@ -69,4 +69,4 @@ XPath
     4.
         //municipality[@name="Vilnius"]/@population > //municipality[@name="Trakai"]/@population
         //building[@name="Vilnius-Cathedral"]/@architecture = //building[@name="traku-pilis"]/@architecture
-    
+        //municipality[@name="Vilnius"]/@population + //municipality[@name="Trakai"]/@population
