@@ -136,3 +136,6 @@ XPath
                             <building name="Vilnius-Cathedral" type="church" architecture="gothic" added="2016-01-02"/>
                         </street>
                     </microdisctrict>
+    6.
+        //municipality/@name = "Vilnius"
+
