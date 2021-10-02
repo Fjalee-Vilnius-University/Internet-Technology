@@ -24,6 +24,11 @@
                             <building name="VU-matematikos-ir-informatikos-fakultetas" number="24" added="2018-01-09"/>
                         </street>
                     </microdisctrict>
+                    <microdisctrict name="Senamiestis">
+                        <street name="Sventaragio">
+                            <building name="Vilnius-Cathedral" type="church" architecture="gothic" added="2016-01-02"/>
+                        </street>
+                    </microdisctrict>
                 </city> 
             </municipality>
 
@@ -61,5 +66,6 @@ XPath
     3.
         count(//city)
         sum(//municipality/@population)
-
+    4.
+        //building[@name="Vilnius-Cathedral"]/@architecture = //building[@name="traku-pilis"]/@architecture
     
