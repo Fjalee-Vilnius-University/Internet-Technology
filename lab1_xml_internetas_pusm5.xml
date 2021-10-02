@@ -141,3 +141,5 @@ XPath
         //street[@name="Naugarduko"]/building/@number = "24"
         //water[@type="river"] = true()
         //municipality/@name = //city/@name
+    7.
+        //country[@name="Lithuania"]//@population > //country[@name="Russia"]//@population
