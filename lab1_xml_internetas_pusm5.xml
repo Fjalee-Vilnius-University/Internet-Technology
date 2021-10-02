@@ -140,4 +140,4 @@ XPath
         //municipality/@name = "Vilnius"
         //street[@name="Naugarduko"]/building/@number = "24"
         //water[@type="river"] = true()
-
+        //municipality/@name = //city/@name
