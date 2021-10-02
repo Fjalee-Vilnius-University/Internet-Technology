@@ -138,4 +138,4 @@ XPath
                     </microdisctrict>
     6.
         //municipality/@name = "Vilnius"
-
+        //street[@name="Naugarduko"]/building/@number = "24"
