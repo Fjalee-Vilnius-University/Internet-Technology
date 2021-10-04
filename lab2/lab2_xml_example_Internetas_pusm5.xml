@@ -9,7 +9,9 @@
                         <forest name="Kudrionio">
                             <water type="lake" name="Galves">
                                 <land type="island" name="Traku">
-                                    <building type="museum" architecture="gothic" name="traku-pilis"/>
+                                    <building type="museum" architecture="gothic">
+                                        Traku Pilis
+                                    </building>
                                 </land>
                             </water>
                         </forest>
@@ -21,12 +23,16 @@
                 <city name="Vilnius">
                     <microdisctrict name="Naujamiestis">
                         <street name="Naugarduko">
-                            <building name="VU-matematikos-ir-informatikos-fakultetas" number="24" added="2018-01-09"/>
+                            <building number="24" added="2018-01-09"/>
+                                <name>VU matematikos ir informatikos fakultetas</name>
+                            </building>
                         </street>
                     </microdisctrict>
                     <microdisctrict name="Senamiestis">
                         <street name="Sventaragio">
-                            <building name="Vilnius-Cathedral" type="church" architecture="gothic" added="2016-01-02"/>
+                            <building type="church" architecture="gothic" added="2016-01-02">
+                                <name>Vilnius Cathedral</name>
+                            </building>
                         </street>
                     </microdisctrict>
                 </city> 
