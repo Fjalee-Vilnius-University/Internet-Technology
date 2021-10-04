@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="https://github.com/Fjalee/Internet-Technology">
     <xs:simpleType name="name"/>
+    <xs:simpleType name="edited">
+        <xs:list itemType="xs:date"/>
+    </xs:simpleType>
 </xs:schema>
