@@ -29,8 +29,6 @@ example
 
 
 TODO XML Schema
-    Paprastas tipas, apribojantis kokį nors Schema standartinį tipą,
-    Prasmingas sąrašo tipas (list type). Neprasmingo sąrašo tipo pavyzdys: sąrašas iš string tipo elementų. Neprasmingas todėl, kad jį galima pakeisti vienu paprastu tipu: string.
     Sudėtingi tipai su paprastu turiniu,
     išvesti apribojimu (restriction) iš jūsų (ne XML Schema) bazinio tipo
     išvesti praplėtimu (extension) iš jūsų bazinio tipo
