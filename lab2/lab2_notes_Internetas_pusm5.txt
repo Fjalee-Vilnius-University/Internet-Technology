@@ -29,7 +29,6 @@ example
 
 
 TODO XML Schema
-    Sudėtingi tipai su paprastu turiniu,
     išvesti apribojimu (restriction) iš jūsų (ne XML Schema) bazinio tipo
     išvesti praplėtimu (extension) iš jūsų bazinio tipo
     Sudėtingi tipai su sudėtingu turiniu,
