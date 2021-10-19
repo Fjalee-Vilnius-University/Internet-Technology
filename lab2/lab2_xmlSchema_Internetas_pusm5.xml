@@ -50,14 +50,14 @@
     </xs:complexType>
 
     <xs:complexType name="Microdisctrict">
-        <xs:sequence minOccurs="0">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
             <xs:element name="street" type="Street" />
         </xs:sequence>
         <xs:attribute name="name" type="xs:string"/>
     </xs:complexType>
 
     <xs:complexType name="Street">
-        <xs:sequence minOccurs="0">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
             <xs:element name="building" type="Building" />
         </xs:sequence>
         <xs:attribute name="name" type="xs:string"/>
