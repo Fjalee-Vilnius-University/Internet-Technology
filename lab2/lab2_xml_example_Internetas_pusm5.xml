@@ -19,8 +19,8 @@
                 </city>
             </municipality>
 
-            <municipality name="Vilnius" population="544386">
-                <city name="Vilnius">
+            <municipality name="Vilnius" population="706832">
+                <city name="Vilnius" population="544386">
                     <microdisctrict name="Naujamiestis">
                         <street name="Naugarduko">
                             <building number="24" added="2018-01-09"/>

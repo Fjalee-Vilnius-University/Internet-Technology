@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="building" type="Building" />
+    <xs:element name="city" type="City" />
 
     <xs:simpleType name="Name">
         <xs:restriction base="xs:string">
@@ -29,15 +29,47 @@
             </xs:choice>
         </xs:sequence>
     </xs:complexType>
+
+    <xs:complexType name="City">
+        <xs:complexContent>
+            <xs:extension base="Microdisctrict">
+                <xs:sequence minOccurs="0">
+                    <xs:element name="microdisctrict" type="Microdisctrict"/>
+                </xs:sequence>
+                <xs:attribute name="population" type="xs:integer"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="Microdisctrict">
+        <xs:sequence minOccurs="0">
+            <xs:element name="street" type="Street" />
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string"/>
+    </xs:complexType>
+
+    <xs:complexType name="Street">
+        <xs:sequence minOccurs="0">
+            <xs:element name="building" type="Building" />
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string"/>
+    </xs:complexType>
 </xs:schema>
 
 <!-- -->
-<building>
-    <edited>
-        2019-01-04
-        2019-02-24
-        2019-08-09
-    </edited>
-
-    <nameWithAbr abr="MIF">VU matematikos ir informatikos fakultetas</nameWithAbr>
-</building>
+<city name="Vilnius" population="544386">
+    <microdisctrict name="Naujamiestis">
+        <street name="Naugarduko">
+            <building>
+                <edited>
+                    2019-01-04
+                    2019-02-24
+                    2019-08-09
+                </edited>
+            
+                <nameWithAbr abr="MIF">VU matematikos ir informatikos fakultetas</nameWithAbr>
+            </building>
+        </street>
+    </microdisctrict>
+</city> 
+<!-- -->
