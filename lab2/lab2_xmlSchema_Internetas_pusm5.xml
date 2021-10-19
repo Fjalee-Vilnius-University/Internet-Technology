@@ -38,7 +38,7 @@
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="City">
+    <xs:complexType name="Town">
         <xs:complexContent>
             <xs:extension base="Microdisctrict">
                 <xs:sequence minOccurs="0">
@@ -46,6 +46,14 @@
                 </xs:sequence>
                 <xs:attribute name="population" type="xs:integer"/>
             </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="City">
+        <xs:complexContent>
+            <xs:restriction base="Town">
+                <xs:attribute name="populationd" type="xs:integer" use="required"/>
+            </xs:restriction>
         </xs:complexContent>
     </xs:complexType>
 
@@ -61,6 +69,22 @@
             <xs:element name="building" type="Building" />
         </xs:sequence>
         <xs:attribute name="name" type="xs:string"/>
+    </xs:complexType>
+
+    <xs:complexType name="Test2">
+        <xs:complexContent>
+            <xs:restriction base="Test1">
+                <xs:attribute name="test" type="xs:string" fixed="EN"/>
+            </xs:restriction>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="Test1">
+        <xs:simpleContent>
+            <xs:extension base="Name">
+                <xs:attribute name="test" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
     </xs:complexType>
 </xs:schema>
 
