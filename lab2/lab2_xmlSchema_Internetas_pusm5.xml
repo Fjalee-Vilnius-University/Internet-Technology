@@ -12,7 +12,23 @@
         <xs:list itemType="xs:date"/>
     </xs:simpleType>
 
-    <xs:complexType name="NameWithAbr">
+    <xs:complexType name="Abbreviation">
+        <xs:simpleContent>
+            <xs:restriction base="LongAbbreviation">
+                <xs:maxLength value="10"></xs:maxLength>
+            </xs:restriction>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="LongAbbreviation">
+        <xs:simpleContent>
+            <xs:extension base="Name">
+                <xs:attribute name="full" type="Name"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <!-- <xs:complexType name="NameWithAbr">
         <xs:simpleContent>
             <xs:extension base="Name">
                 <xs:attribute name="abr" type="Abreviation"/>
@@ -24,14 +40,14 @@
         <xs:restriction base="xs:string">
             <xs:maxLength value="10"/>
         </xs:restriction>
-    </xs:simpleType>
+    </xs:simpleType> -->
 
     <xs:complexType name="Building">
         <xs:sequence>
             <xs:element name="edited" type="Edited" />
             <xs:choice>
                 <xs:element name="name" type="Name" />
-                <xs:element name="nameWithAbr" type="NameWithAbr" />
+                <xs:element name="abbreviation" type="Abbreviation" />
             </xs:choice>
         </xs:sequence>
     </xs:complexType>
@@ -73,7 +89,8 @@
                     2019-08-09
                 </edited>
             
-                <nameWithAbr abr="MIF">VU matematikos ir informatikos fakultetas</nameWithAbr>
+                <!-- <nameWithAbr abr="MIF">VU matematikos ir informatikos fakultetas</nameWithAbr> -->
+                <abbreviation full="VU matematikos ir informatikos fakultetas">MIF</abbreviation>
             </building>
         </street>
     </microdisctrict>
