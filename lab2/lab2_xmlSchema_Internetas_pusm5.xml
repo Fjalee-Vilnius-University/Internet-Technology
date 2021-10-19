@@ -12,18 +12,28 @@
         <xs:list itemType="xs:date"/>
     </xs:simpleType>
 
-    <xs:simpleType name="NameWithAbr">
-        <xs:restriction base="Name">
+    <xs:complexType name="NameWithAbr">
+        <xs:simpleContent>
+            <xs:extension base="Name">
+                <xs:attribute name="abr" type="Abreviation"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="Abreviation">
+        <xs:restriction base="xs:string">
             <xs:maxLength value="10"/>
         </xs:restriction>
     </xs:simpleType>
 
     <xs:complexType name="Building">
-        <xs:all>
+        <xs:sequence>
             <xs:element name="edited" type="Edited" />
-            <xs:element name="name" type="Name" />
-            <xs:element name="nameWithAbr" type="NameWithAbr" />
-        </xs:all>
+            <xs:choice>
+                <xs:element name="name" type="Name" />
+                <xs:element name="nameWithAbr" type="NameWithAbr" />
+            </xs:choice>
+        </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="City">
@@ -63,8 +73,7 @@
                     2019-08-09
                 </edited>
             
-                <name>VU matematikos ir informatikos fakultetas</name>
-                <nameWithAbr>MIF</nameWithAbr>
+                <nameWithAbr abr="MIF">VU matematikos ir informatikos fakultetas</nameWithAbr>
             </building>
         </street>
     </microdisctrict>
