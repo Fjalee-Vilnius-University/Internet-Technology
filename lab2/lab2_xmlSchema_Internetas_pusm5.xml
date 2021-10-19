@@ -28,20 +28,6 @@
         </xs:simpleContent>
     </xs:complexType>
 
-    <!-- <xs:complexType name="NameWithAbr">
-        <xs:simpleContent>
-            <xs:extension base="Name">
-                <xs:attribute name="abr" type="Abreviation"/>
-            </xs:extension>
-        </xs:simpleContent>
-    </xs:complexType>
-
-    <xs:simpleType name="Abreviation">
-        <xs:restriction base="xs:string">
-            <xs:maxLength value="10"/>
-        </xs:restriction>
-    </xs:simpleType> -->
-
     <xs:complexType name="Building">
         <xs:sequence>
             <xs:element name="edited" type="Edited" />
@@ -89,7 +75,6 @@
                     2019-08-09
                 </edited>
             
-                <!-- <nameWithAbr abr="MIF">VU matematikos ir informatikos fakultetas</nameWithAbr> -->
                 <abbreviation full="VU matematikos ir informatikos fakultetas">MIF</abbreviation>
             </building>
         </street>
