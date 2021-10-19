@@ -36,7 +36,7 @@ TODO XML Schema
        * išvesti praplėtimu (extension) iš jūsų bazinio tipo
     - Sudėtingi tipai su sudėtingu turiniu,
         išvesti apribojimu (restriction) iš jūsų bazinio tipo
-        išvesti praplėtimu (extension) iš jūsų bazinio tipo
+       * išvesti praplėtimu (extension) iš jūsų bazinio tipo
     Pademonstruoti apribojimo principą - parodyti pavyzdį, kai apribojimo principas pažeistas, ir žinoti, kaip reikia pataisyti pavyzdį,
     Sudėtingas tipas su mišriu turiniu,
     choice valdymo struktūra,
