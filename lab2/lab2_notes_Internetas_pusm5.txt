@@ -29,7 +29,6 @@ example
 
 
 TODO XML Schema
-    Sudėtingi tipai su sudėtingu turiniu,
     išvesti apribojimu (restriction) iš jūsų bazinio tipo
     išvesti praplėtimu (extension) iš jūsų bazinio tipo
     Pademonstruoti apribojimo principą - parodyti pavyzdį, kai apribojimo principas pažeistas, ir žinoti, kaip reikia pataisyti pavyzdį,
