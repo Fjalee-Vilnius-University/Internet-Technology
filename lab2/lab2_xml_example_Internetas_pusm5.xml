@@ -1,59 +1,16 @@
-<planet name="Earth" xlmns="http://klevas.mif.vu.lt/~ryce6320">
-    <continent name="Europe" xmlns:continent="Europe">
-        <country name="Lithuania" currency="Euro" xmlns:country="Lithuania">
-            <water type="river" name="Nemunas" length="937" country:place-by-length="1" continent:place-by-length="197"/>
-
-            <municipality name="Trakai" population="4141">
-                <city name="Trakai">
-                    <park type="national" name="Trakai-historical">
-                        <forest name="Kudrionio">
-                            <water type="lake" name="Galves">
-                                <land type="island" name="Traku">
-                                    <building type="museum" architecture="gothic">
-                                        Traku Pilis
-                                    </building>
-                                </land>
-                            </water>
-                        </forest>
-                    </park>
-                </city>
-            </municipality>
-
-            <municipality name="Vilnius" population="706832">
-                <city name="Vilnius" population="544386">
-                    <microdisctrict name="Naujamiestis">
-                        <street name="Naugarduko">
-                            <building number="24" added="2018-01-09"/>
-                                <name>VU matematikos ir informatikos fakultetas</name>
-                                <edited>
-                                    2019-01-04
-                                    2019-02-24
-                                    2019-08-09
-                                <edited/>
-                            </building>
-                        </street>
-                    </microdisctrict>
-                    <microdisctrict name="Senamiestis">
-                        <street name="Sventaragio">
-                            <building type="church" architecture="gothic" added="2016-01-02">
-                                <name>Vilnius Cathedral</name>
-                            </building>
-                        </street>
-                    </microdisctrict>
-                </city> 
-            </municipality>
-
-            <municipality name="Moletai" density="14.07" population="19233">
-                <city name="Dubingiai">
-                    <park type="regional" name="Asveja">
-                        <water type="lake" name="Asveja">
-                            <land type="peninsula" name="dubingiu-piliaviete"/>
-                        </water>
-                    </park>
-                </city>
-            </municipality>
-
-        </country>
-    </continent>
-    <water type="ocean" name="pacific"/>
-</planet>
+<city name="Vilnius" population="544386">
+    <microdisctrict name="Naujamiestis">
+        <street>
+            Naugardukas
+            <building number="A24">
+                <edited>
+                    2019-01-04
+                    2019-02-24
+                    2019-08-09
+                </edited>
+            
+                <abbreviation full="VU matematikos ir informatikos fakultetas">MIF</abbreviation>
+            </building>
+        </street>
+    </microdisctrict>
+</city> 

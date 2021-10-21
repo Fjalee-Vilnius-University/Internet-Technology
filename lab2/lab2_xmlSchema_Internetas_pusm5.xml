@@ -84,22 +84,3 @@
         </xs:restriction>
     </xs:simpleType>
 </xs:schema>
-
-<!-- -->
-<city name="Vilnius" population="544386">
-    <microdisctrict name="Naujamiestis">
-        <street>
-            Naugardukas
-            <building number="A24">
-                <edited>
-                    2019-01-04
-                    2019-02-24
-                    2019-08-09
-                </edited>
-            
-                <abbreviation full="VU matematikos ir informatikos fakultetas">MIF</abbreviation>
-            </building>
-        </street>
-    </microdisctrict>
-</city> 
-<!-- -->
