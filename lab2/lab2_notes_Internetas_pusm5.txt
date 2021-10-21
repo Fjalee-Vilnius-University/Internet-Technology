@@ -39,7 +39,7 @@ TODO XML Schema
        * išvesti praplėtimu (extension) iš jūsų bazinio tipo
     * Pademonstruoti apribojimo principą - parodyti pavyzdį, kai apribojimo principas pažeistas, ir žinoti, kaip reikia pataisyti pavyzdį,
     Sudėtingas tipas su mišriu turiniu,
-    choice valdymo struktūra,
+    * choice valdymo struktūra,
     Bent viena nuoroda (keyref) į unikalumo ribojimą (unique) arba raktą (key)
     Visi jūsų susikurti tipai turi priklausyti jūsų vardų sričiai
 
