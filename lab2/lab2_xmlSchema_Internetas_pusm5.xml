@@ -72,22 +72,6 @@
         <xs:attribute name="name" type="xs:string"/>
     </xs:complexType>
 
-    <xs:complexType name="Test2">
-        <xs:complexContent>
-            <xs:restriction base="Test1">
-                <xs:attribute name="test" type="xs:string" fixed="EN"/>
-            </xs:restriction>
-        </xs:complexContent>
-    </xs:complexType>
-
-    <xs:complexType name="Test1">
-        <xs:simpleContent>
-            <xs:extension base="Name">
-                <xs:attribute name="test" type="xs:string"/>
-            </xs:extension>
-        </xs:simpleContent>
-    </xs:complexType>
-
     <!-- <xs:simpleType name="BuildingNumbner">
         <xs:restriction base="xs:integer">
             <xs:pattern value="[A-Z][0-9]{1}|[A-Z][0-9]{2}|[A-Z][0-9]{3}|[0-9]{1}|[0-9]{2}|[0-9]{3}"/>
