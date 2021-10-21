@@ -65,7 +65,7 @@
         <xs:attribute name="name" type="xs:string"/>
     </xs:complexType>
 
-    <xs:complexType name="Street">
+    <xs:complexType name="Street" mixed="true">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
             <xs:element name="building" type="Building" />
         </xs:sequence>
@@ -88,8 +88,9 @@
 <!-- -->
 <city name="Vilnius" population="544386">
     <microdisctrict name="Naujamiestis">
-        <street name="Naugarduko">
-            <building number="s24">
+        <street>
+            Naugardukas
+            <building number="A24">
                 <edited>
                     2019-01-04
                     2019-02-24
