@@ -3,7 +3,7 @@
         <microdisctrict name="Naujamiestis">
             <street>
                 Naugardukas
-                <building number="A24">
+                <building number="A24" id="1234">
                     <edited>
                         2019-01-04
                         2019-02-24
@@ -17,6 +17,6 @@
     </city>
 
     <bookmarks>
-        testBookmark
+        <bookmark buildingId="1234">myTestBookmark</bookmark>
     </bookmarks>
 </map>

@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="map" type="Map" />
+    <xs:element name="map" type="Map">
+        <xs:key name="buildingKey">
+            <xs:selector xpath="city/microdisctrict/street/building"/>
+            <xs:field xpath="@id"/>
+        </xs:key>
+        <xs:keyref name="bookmarkRef" refer="buildingKey">
+            <xs:selector xpath="bookmarks/bookmark"/>
+            <xs:field xpath="@buildingId"/>
+        </xs:keyref>
+    </xs:element>
 
     <xs:simpleType name="Name">
         <xs:restriction base="xs:string">
@@ -37,6 +46,21 @@
             </xs:choice>
         </xs:sequence>
         <xs:attribute name="number" type="BuildingNumber"/>
+        <xs:attribute name="id" type="xs:string"/>
+    </xs:complexType>
+
+    <xs:complexType name="BuildingUnderConstruction">
+        <xs:complexContent>
+            <xs:restriction base="Building">
+                <xs:sequence>
+                    <xs:element name="edited" type="Edited" />
+                    <xs:choice>
+                        <xs:element name="name" type="Name" />
+                        <xs:element name="abbreviation" type="Abbreviation" />
+                    </xs:choice>
+                </xs:sequence>
+            </xs:restriction>
+        </xs:complexContent>
     </xs:complexType>
 
     <xs:complexType name="City">
@@ -50,14 +74,6 @@
         </xs:complexContent>
     </xs:complexType>
 
-    <xs:complexType name="Town">
-        <xs:complexContent>
-            <xs:restriction base="City">
-                <xs:attribute name="population" type="xs:integer" use="optional"/>
-            </xs:restriction>
-        </xs:complexContent>
-    </xs:complexType>
-
     <xs:complexType name="Microdisctrict">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
             <xs:element name="street" type="Street" />
@@ -67,7 +83,7 @@
 
     <xs:complexType name="Street" mixed="true">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
-            <xs:element name="building" type="Building" />
+            <xs:element name="building" type="Building"/>
         </xs:sequence>
         <xs:attribute name="name" type="xs:string"/>
     </xs:complexType>
@@ -84,9 +100,19 @@
         </xs:restriction>
     </xs:simpleType>
 
-    <xs:simpleType name="Bookmarks">
-        <xs:list itemType="xs:string"/>
-    </xs:simpleType>
+    <xs:complexType name="Bookmarks">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="bookmark" type="Bookmark"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Bookmark">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="buildingId" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
 
     <xs:complexType name="Map">
         <xs:sequence minOccurs="0" maxOccurs="unbounded">
