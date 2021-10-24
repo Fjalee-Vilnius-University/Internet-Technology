@@ -91,6 +91,32 @@
         "name": { "type": "string" }
       },
       "required": ["waterType", "name"]
+    },
+    "water": {
+      "oneOf": [
+        {
+          "allOf": [
+            { "$ref": "#/definitions/waterBase" },
+            {
+              "type": "object",
+              "properties": {
+                "length": { "type": "number" }
+              }
+            }
+          ]
+        },
+        {
+          "allOf": [
+            { "$ref": "#/definitions/waterBase" },
+            {
+              "type": "object",
+              "properties": {
+                "area": { "type": "number" }
+              }
+            }
+          ]
+        }
+      ]
     }
   },
   "type": "object",
@@ -99,7 +125,7 @@
       "type": "object",
       "properties": {
         "city": { "$ref": "#/definitions/city" },
-        "water": { "$ref": "#/definitions/waterBase" }
+        "water": { "$ref": "#/definitions/water" }
       },
       "required": ["city"]
     }

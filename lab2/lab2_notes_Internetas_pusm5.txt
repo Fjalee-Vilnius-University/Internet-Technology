@@ -50,6 +50,6 @@ TODO JSON Schema
     * Panaudotos bent 2 reguliarios išraikos
     Realizuotas schemų praplėtimas naudojantis 
        * allOf
-        anyOf
-        oneOf
+       * anyOf
+       * oneOf
     * Realizuotas schemų pakartotinis panaudojimas: definitions ir $ref raktažodžiai
