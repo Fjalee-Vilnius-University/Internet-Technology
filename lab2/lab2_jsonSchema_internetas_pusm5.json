@@ -34,15 +34,16 @@
           "maxLength": "5"
         }
       },
-      "id": { "type": "number" }
+      "id": { "type": "number" },
+      "required": ["buildingType", "number", "id", "edited", "abbreviation"]
     }
   },
   "type": "object",
   "properties": {
     "street": {
       "text": { "type": "string" },
-      "required": ["buildingType", "number", "id", "edited", "abbreviation"]
+      "required": ["text"]
     }
   },
-  "required": ["text"]
+  "required": ["street"]
 }
