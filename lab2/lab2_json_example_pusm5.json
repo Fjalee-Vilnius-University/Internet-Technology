@@ -25,6 +25,11 @@
         }
       }
     },
+    "water" : {
+      "waterType": "river",
+      "name": "Nemunas",
+      "length": "937"
+    },
     "bookmarks": {
       "bookmark": {
         "buildingId": "1234",

@@ -83,16 +83,25 @@
           ]
         }
       }
+    },
+    "waterBase": {
+      "type": "object",
+      "properties": {
+        "waterType": { "enum": ["river", "lake", "ocean"] },
+        "name": { "type": "string" }
+      },
+      "required": ["waterType", "name"]
     }
   },
   "type": "object",
   "properties": {
-    "map":{
-      "type":"object",
+    "map": {
+      "type": "object",
       "properties": {
-        "city" : { "$ref": "#/definitions/city" }
+        "city": { "$ref": "#/definitions/city" },
+        "water": { "$ref": "#/definitions/waterBase" }
       },
-      "required" : ["city"]
+      "required": ["city"]
     }
   },
   "required": ["map"]
