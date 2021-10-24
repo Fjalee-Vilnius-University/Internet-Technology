@@ -11,7 +11,7 @@
               "building": {
                 "buildingType" : "university",
                 "number": "A24",
-                "id": "1234",
+                "idb": "1234",
                 "edited": [
                     "2019-01-04",
                     "2019-02-24",

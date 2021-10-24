@@ -16,7 +16,7 @@
         "type": "string",
         "pattern": "[A-Z][0-9]{1}|[A-Z][0-9]{2}|[A-Z][0-9]{3}|[0-9]{1}|[0-9]{2}|[0-9]{3}"
       },
-      "id": { "type": "number" },
+      "idb": { "type": "number" },
       "edited": {
         "type": "array",
         "items": {
@@ -35,7 +35,7 @@
           "maxLength": "5"
         }
       },
-      "required": ["buildingType", "number", "id", "edited", "abbreviation"]
+      "required": ["buildingType", "number", "idb", "edited", "abbreviation"]
     }
   },
   "type": "object",
