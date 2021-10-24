@@ -52,4 +52,4 @@ TODO JSON Schema
         allOf
         anyOf
         oneOf
-    Realizuotas schemų pakartotinis panaudojimas: definitions ir $ref raktažodžiai
+    * Realizuotas schemų pakartotinis panaudojimas: definitions ir $ref raktažodžiai
