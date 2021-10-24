@@ -71,7 +71,7 @@
           "maximum": 8000000000
         },
         "microdisctrict": {
-          "allOf": [
+          "anyOf": [
             { "$ref": "#/definitions/areaWithBuildings" },
             {
               "properties": {
