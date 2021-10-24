@@ -65,18 +65,28 @@
   },
   "type": "object",
   "properties": {
-    "microdisctrict": {
-      "allOf": [
-        { "$ref": "#/definitions/areaWithBuildings" },
-        {
-          "properties": {
-            "street": { "$ref": "#/definitions/areaWithBuildings" },
-            "distanceFromCenter": { "type": "number" }
-          },
-          "required": ["street"]
+    "city": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "population": {
+          "type": "number",
+          "maximum": 8000000000
+        },
+        "microdisctrict": {
+          "allOf": [
+            { "$ref": "#/definitions/areaWithBuildings" },
+            {
+              "properties": {
+                "street": { "$ref": "#/definitions/areaWithBuildings" },
+                "distanceFromCenter": { "type": "number" }
+              },
+              "required": ["street"]
+            }
+          ]
         }
-      ]
+      }
     }
   },
-  "required": ["microdisctrict"]
+  "required": ["city"]
 }

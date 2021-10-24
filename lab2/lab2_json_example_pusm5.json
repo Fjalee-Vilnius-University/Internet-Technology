@@ -2,7 +2,7 @@
   "map": {
     "city": {
       "name": "Vilnius",
-      "population": "544386",
+      "population": 544386,
       "microdisctrict": {
         "text": "Naujamiestis",
         "distanceFromCenter": 1245,
