@@ -47,7 +47,10 @@
   "type": "object",
   "properties": {
     "street": {
-      "text": { "type": "string" },
+      "type": "object",
+      "properties": {
+        "text": { "type": "string" }
+      },
       "required": ["text"]
     }
   },
