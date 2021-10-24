@@ -1,8 +1,35 @@
-{
-  "type" : "university",
-  "edited" : [
-    "2019-01-04",
-    "2019-02-24",
-    "2019-08-09"
-  ]
-}
+
+    {
+      "map": {
+        "city": {
+          "name": "Vilnius",
+          "population": "544386",
+          "microdisctrict": {
+            "name": "Naujamiestis",
+            "street": {
+              "text": "Naugardukas",
+              "building": {
+                "buildingType" : "university",
+                "number": "A24",
+                "id": "1234",
+                "edited": [
+                    "2019-01-04",
+                    "2019-02-24",
+                    "2019-08-09"
+                ],
+                "abbreviation": {
+                  "full": "VU matematikos ir informatikos fakultetas",
+                  "text": "MIF"
+                }
+              }
+            }
+          }
+        },
+        "bookmarks": {
+          "bookmark": {
+            "buildingId": "1234",
+            "text": "myTestBookmark"
+          }
+        }
+      }
+    }

@@ -44,44 +44,9 @@ TODO XML Schema
     Visi jūsų susikurti tipai turi priklausyti jūsų vardų sričiai
 
 TODO JSON Schema
-    Panaudoti bent 4 skirtingi duomenų tipai
+    * Panaudoti bent 4 skirtingi duomenų tipai
     * Panaudotas enum raktažodis
-    Panaudoti bent 4 validacijai skirti raktažodžiai
+    * Panaudoti bent 4 validacijai skirti raktažodžiai
     Panaudotos bent 2 reguliarios išraikos
     Realizuotas schemų praplėtimas naudojantis allOf, anyOf, oneOf raktažodžiais
     Realizuotas schemų pakartotinis panaudojimas: definitions ir $ref raktažodžiai
-
-    {
-    "map": {
-      "city": {
-        "name": "Vilnius",
-        "population": "544386",
-        "microdisctrict": {
-          "name": "Naujamiestis",
-          "street": {
-            "#text": "Naugardukas",
-            "building": {
-              "type" : "university",
-              "number": "A24",
-              "id": "1234",
-              "edited": [
-                  "2019-01-04",
-                  "2019-02-24",
-                  "2019-08-09"
-              ],
-              "abbreviation": {
-                "full": "VU matematikos ir informatikos fakultetas",
-                "#text": "MIF"
-              }
-            }
-          }
-        }
-      },
-      "bookmarks": {
-        "bookmark": {
-          "buildingId": "1234",
-          "text": "myTestBookmark"
-        }
-      }
-    }
-  }
