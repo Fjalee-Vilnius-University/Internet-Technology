@@ -3,41 +3,45 @@
   "definitions": {},
   "type": "object",
   "properties": {
-    "building": {
-      "edited": {
-        "type": "array",
-        "items": {
-          "type": "string",
-          "format": "date"
-        }
-      },
-      "buildingType": {
-        "enum": [
-          "university",
-          "museum",
-          "hospital",
-          "shop",
-          "personal",
-          "other"
-        ]
-      },
-      "number": {
-        "type": "string",
-        "pattern": "[A-Z][0-9]{1}|[A-Z][0-9]{2}|[A-Z][0-9]{3}|[0-9]{1}|[0-9]{2}|[0-9]{3}"
-      },
-      "abbreviation": {
-        "full": {
-          "type": "string",
-          "maxLength": "10",
-          "minLength": "5"
+    "street": {
+      "text": { "type": "string" },
+      "building": {
+        "edited": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "date"
+          }
         },
-        "text": {
+        "buildingType": {
+          "enum": [
+            "university",
+            "museum",
+            "hospital",
+            "shop",
+            "personal",
+            "other"
+          ]
+        },
+        "number": {
           "type": "string",
-          "maxLength": "5"
-        }
+          "pattern": "[A-Z][0-9]{1}|[A-Z][0-9]{2}|[A-Z][0-9]{3}|[0-9]{1}|[0-9]{2}|[0-9]{3}"
+        },
+        "abbreviation": {
+          "full": {
+            "type": "string",
+            "maxLength": "10",
+            "minLength": "5"
+          },
+          "text": {
+            "type": "string",
+            "maxLength": "5"
+          }
+        },
+        "id": { "type": "number" }
       },
-      "id": { "type": "number" }
-    },
-    "required": ["edited", "type", "number", "abbreviation", "id"]
-  }
+      "required": ["edited", "type", "number", "abbreviation", "id"]
+    }
+  },
+  "required": ["text"]
 }
