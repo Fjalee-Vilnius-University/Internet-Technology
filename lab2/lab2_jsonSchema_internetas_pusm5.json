@@ -31,7 +31,7 @@
           "properties": {
             "full": {
               "type": "string",
-              "maxLength": 10,
+              "maxLength": 50,
               "minLength": 5
             },
             "text": {
@@ -49,9 +49,10 @@
     "street": {
       "type": "object",
       "properties": {
-        "text": { "type": "string" }
+        "text": { "type": "string" },
+        "building": { "$ref": "#/definitions/building" }
       },
-      "required": ["text"]
+      "required": ["text", "building"]
     }
   },
   "required": ["street"]
