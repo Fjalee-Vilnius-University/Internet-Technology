@@ -1,16 +1,22 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "definitions": {
-  },
+  "definitions": {},
   "type": "object",
   "properties": {
-    "edited" : {
-      "type" : "array",
-      "items": { "type" : "string" }
+    "edited": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "date"
+      }
     },
-    "type" : {
+    "type": {
       "enum": ["university", "museum", "hospital", "shop", "personal", "other"]
+    },
+    "number" : {
+      "type" : "string",
+      "pattern": ""
     }
   },
-  "required" : ["edited"]
+  "required": ["edited"]
 }
