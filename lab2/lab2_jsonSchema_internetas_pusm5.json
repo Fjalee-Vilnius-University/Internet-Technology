@@ -31,17 +31,17 @@
           "properties": {
             "full": {
               "type": "string",
-              "maxLength": "10",
-              "minLength": "5"
+              "maxLength": 10,
+              "minLength": 5
             },
             "text": {
               "type": "string",
-              "maxLength": "5"
+              "maxLength": 5
             }
           }
-        },
-        "required": ["buildingType", "number", "idb", "edited", "abbreviation"]
-      }
+        }
+      },
+      "required": ["buildingType", "number", "idb", "edited", "abbreviation"]
     }
   },
   "type": "object",
