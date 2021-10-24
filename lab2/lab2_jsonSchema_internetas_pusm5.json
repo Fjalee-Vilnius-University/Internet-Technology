@@ -2,13 +2,6 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "definitions": {
     "building": {
-      "edited": {
-        "type": "array",
-        "items": {
-          "type": "string",
-          "format": "date"
-        }
-      },
       "buildingType": {
         "enum": [
           "university",
@@ -23,6 +16,14 @@
         "type": "string",
         "pattern": "[A-Z][0-9]{1}|[A-Z][0-9]{2}|[A-Z][0-9]{3}|[0-9]{1}|[0-9]{2}|[0-9]{3}"
       },
+      "id": { "type": "number" },
+      "edited": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "format": "date"
+        }
+      },
       "abbreviation": {
         "full": {
           "type": "string",
@@ -34,7 +35,6 @@
           "maxLength": "5"
         }
       },
-      "id": { "type": "number" },
       "required": ["buildingType", "number", "id", "edited", "abbreviation"]
     }
   },
