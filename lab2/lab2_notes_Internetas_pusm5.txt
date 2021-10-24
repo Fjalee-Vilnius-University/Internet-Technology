@@ -48,5 +48,8 @@ TODO JSON Schema
     * Panaudotas enum raktažodis
     * Panaudoti bent 4 validacijai skirti raktažodžiai
     Panaudotos bent 2 reguliarios išraikos
-    Realizuotas schemų praplėtimas naudojantis allOf, anyOf, oneOf raktažodžiais
+    Realizuotas schemų praplėtimas naudojantis 
+        allOf
+        anyOf
+        oneOf
     Realizuotas schemų pakartotinis panaudojimas: definitions ir $ref raktažodžiai
