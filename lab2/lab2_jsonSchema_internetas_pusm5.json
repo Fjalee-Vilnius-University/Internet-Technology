@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+  },
+  "type": "object",
+  "properties": {
+    "edited" : {
+      "type" : "array",
+      "items": { "type" : "string" }
+    }
+  },
+  "required" : ["edited"]
+}
