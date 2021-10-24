@@ -44,17 +44,28 @@
       "required": ["buildingType", "number", "idb", "edited", "abbreviation"]
     },
     "areaWithBuildings": {
-      "type" : "object",
+      "type": "object",
       "properties": {
         "text": { "type": "string" },
         "building": { "$ref": "#/definitions/building" }
       },
-      "required": ["text", "building"]
+      "required": ["text"]
     }
   },
   "type": "object",
   "properties": {
-    "street": { "$ref": "#/definitions/areaWithBuildings" }
+    "microdisctrict": {
+      "allOf": [
+        { "$ref": "#/definitions/areaWithBuildings" },
+        {
+          "properties": {
+            "street": { "$ref": "#/definitions/areaWithBuildings" },
+            "distanceFromCenter": { "type": "number" }
+          },
+          "required": ["street"]
+        }
+      ]
+    }
   },
-  "required": ["street"]
+  "required": ["microdisctrict"]
 }
