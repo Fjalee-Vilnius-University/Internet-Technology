@@ -42,18 +42,19 @@
         }
       },
       "required": ["buildingType", "number", "idb", "edited", "abbreviation"]
-    }
-  },
-  "type": "object",
-  "properties": {
-    "street": {
-      "type": "object",
+    },
+    "areaWithBuildings": {
+      "type" : "object",
       "properties": {
         "text": { "type": "string" },
         "building": { "$ref": "#/definitions/building" }
       },
       "required": ["text", "building"]
     }
+  },
+  "type": "object",
+  "properties": {
+    "street": { "$ref": "#/definitions/areaWithBuildings" }
   },
   "required": ["street"]
 }

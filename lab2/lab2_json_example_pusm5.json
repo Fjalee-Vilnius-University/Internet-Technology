@@ -5,6 +5,7 @@
       "population": "544386",
       "microdisctrict": {
         "name": "Naujamiestis",
+        "distanceFromCenter": 1245,
         "street": {
           "text": "Naugardukas",
           "building": {
