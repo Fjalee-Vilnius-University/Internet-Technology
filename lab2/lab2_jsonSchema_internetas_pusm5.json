@@ -2,40 +2,46 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "definitions": {
     "building": {
-      "buildingType": {
-        "enum": [
-          "university",
-          "museum",
-          "hospital",
-          "shop",
-          "personal",
-          "other"
-        ]
-      },
-      "number": {
-        "type": "string",
-        "pattern": "[A-Z][0-9]{1}|[A-Z][0-9]{2}|[A-Z][0-9]{3}|[0-9]{1}|[0-9]{2}|[0-9]{3}"
-      },
-      "idb": { "type": "number" },
-      "edited": {
-        "type": "array",
-        "items": {
-          "type": "string",
-          "format": "date"
-        }
-      },
-      "abbreviation": {
-        "full": {
-          "type": "string",
-          "maxLength": "10",
-          "minLength": "5"
+      "type": "object",
+      "properties": {
+        "buildingType": {
+          "enum": [
+            "university",
+            "museum",
+            "hospital",
+            "shop",
+            "personal",
+            "other"
+          ]
         },
-        "text": {
+        "number": {
           "type": "string",
-          "maxLength": "5"
-        }
-      },
-      "required": ["buildingType", "number", "idb", "edited", "abbreviation"]
+          "pattern": "[A-Z][0-9]{1}|[A-Z][0-9]{2}|[A-Z][0-9]{3}|[0-9]{1}|[0-9]{2}|[0-9]{3}"
+        },
+        "idb": { "type": "number" },
+        "edited": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "abbreviation": {
+          "type": "object",
+          "properties": {
+            "full": {
+              "type": "string",
+              "maxLength": "10",
+              "minLength": "5"
+            },
+            "text": {
+              "type": "string",
+              "maxLength": "5"
+            }
+          }
+        },
+        "required": ["buildingType", "number", "idb", "edited", "abbreviation"]
+      }
     }
   },
   "type": "object",
