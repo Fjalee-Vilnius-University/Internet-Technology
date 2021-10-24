@@ -61,6 +61,7 @@ TODO JSON Schema
           "street": {
             "#text": "Naugardukas",
             "building": {
+              "type" : "university",
               "number": "A24",
               "id": "1234",
               "edited": [

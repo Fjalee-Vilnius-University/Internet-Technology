@@ -7,6 +7,9 @@
     "edited" : {
       "type" : "array",
       "items": { "type" : "string" }
+    },
+    "type" : {
+      "enum": ["university", "museum", "hospital", "shop", "personal", "other"]
     }
   },
   "required" : ["edited"]
