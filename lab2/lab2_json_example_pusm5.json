@@ -9,13 +9,13 @@
         "street": {
           "text": "Naugardukas",
           "building": {
-            "buildingType" : "university",
+            "buildingType": "university",
             "number": "A24",
             "idb": 1234,
             "edited": [
-                "2019-01-04",
-                "2019-02-24",
-                "2019-08-09"
+              { "myDate": "2019-01-04", "location": "LTU" },
+              { "myDate": "2019-02-24", "location": "LTU" },
+              { "myDate": "2019-08-09", "location": "EN" }
             ],
             "abbreviation": {
               "full": "VU matematikos ir informatikos fakultetas",
