@@ -61,6 +61,28 @@
         "building": { "$ref": "#/definitions/building" }
       },
       "required": ["text"]
+    },
+    "city": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "population": {
+          "type": "number",
+          "maximum": 8000000000
+        },
+        "microdisctrict": {
+          "allOf": [
+            { "$ref": "#/definitions/areaWithBuildings" },
+            {
+              "properties": {
+                "street": { "$ref": "#/definitions/areaWithBuildings" },
+                "distanceFromCenter": { "type": "number" }
+              },
+              "required": ["street"]
+            }
+          ]
+        }
+      }
     }
   },
   "type": "object",
@@ -68,29 +90,9 @@
     "map":{
       "type":"object",
       "properties": {
-        "city": {
-          "type": "object",
-          "properties": {
-            "name": { "type": "string" },
-            "population": {
-              "type": "number",
-              "maximum": 8000000000
-            },
-            "microdisctrict": {
-              "allOf": [
-                { "$ref": "#/definitions/areaWithBuildings" },
-                {
-                  "properties": {
-                    "street": { "$ref": "#/definitions/areaWithBuildings" },
-                    "distanceFromCenter": { "type": "number" }
-                  },
-                  "required": ["street"]
-                }
-              ]
-            }
-          }
-        }
-      }
+        "city" : { "$ref": "#/definitions/city" }
+      },
+      "required" : ["city"]
     }
   },
   "required": ["map"]
