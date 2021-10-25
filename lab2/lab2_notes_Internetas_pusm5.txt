@@ -1,0 +1,55 @@
+example
+    <?xml version="1.0" encoding="UTF-8"?>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+        <xs:element name="užsakymas" type="UžsakymoTipas" />
+        <xs:complexType name="UžsakymoTipas">
+            <xs:sequence>
+                <xs:element name="pristatyti" type="AdresoTipas" />
+                <xs:element name="apmoka" type="AdresoTipas" />
+                <xs:element name="pastaba" type="xs:string" minOccurs="0" />
+                <xs:element name="prekiųSąrašas" type="..." /> 
+            </xs:sequence>
+            <xs:attribute name="data" type="xs:date" />
+        </xs:complexType>
+        <xs:complexType name="AdresoTipas">
+            <xs:sequence>
+                <xs:element name="vardas" type="xs:string" />
+                <xs:element name="gatvė" type="xs:string" />
+                <xs:element name="miestas" type="MiestoTipas" />
+                <xs:element name="indeksas" type="xs:string" />
+            </xs:sequence>
+            <xs:attribute name="šalis" type="xs:string" fixed="LT" />
+        </xs:complexType>
+        <xs:simpleType name="MiestoTipas">
+            <xs:restriction base="xs:string">
+                <xs:maxLength value="20" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:schema>
+
+
+TODO XML Schema
+    * Paprastas tipas, apribojantis kokį nors Schema standartinį tipą,
+    * Prasmingas sąrašo tipas (list type). Neprasmingo sąrašo tipo pavyzdys: sąrašas iš string tipo elementų. Neprasmingas todėl, kad jį galima pakeisti vienu paprastu tipu: string.
+    - Sudėtingi tipai su paprastu turiniu,
+       * išvesti apribojimu (restriction) iš jūsų (ne XML Schema) bazinio tipo
+       * išvesti praplėtimu (extension) iš jūsų bazinio tipo
+    - Sudėtingi tipai su sudėtingu turiniu,
+       * išvesti apribojimu (restriction) iš jūsų bazinio tipo
+       * išvesti praplėtimu (extension) iš jūsų bazinio tipo
+    * Pademonstruoti apribojimo principą - parodyti pavyzdį, kai apribojimo principas pažeistas, ir žinoti, kaip reikia pataisyti pavyzdį,
+    * Sudėtingas tipas su mišriu turiniu,
+    * choice valdymo struktūra,
+    * Bent viena nuoroda (keyref) į unikalumo ribojimą (unique) arba raktą (key)
+    Visi jūsų susikurti tipai turi priklausyti jūsų vardų sričiai
+
+TODO JSON Schema
+    * Panaudoti bent 4 skirtingi duomenų tipai
+    * Panaudotas enum raktažodis
+    * Panaudoti bent 4 validacijai skirti raktažodžiai
+    * Panaudotos bent 2 reguliarios išraikos
+    Realizuotas schemų praplėtimas naudojantis 
+       * allOf
+       * anyOf
+       * oneOf
+    * Realizuotas schemų pakartotinis panaudojimas: definitions ir $ref raktažodžiai

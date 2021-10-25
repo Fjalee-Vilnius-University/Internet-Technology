@@ -1,0 +1,134 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {
+    "dateAtLocation": {
+      "type": "object",
+      "properties": {
+        "myDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "location": {
+          "type": "string",
+          "pattern": "^[A-Z]{1,3}$"
+        }
+      },
+      "required": ["myDate", "location"]
+    },
+    "building": {
+      "type": "object",
+      "properties": {
+        "buildingType": {
+          "enum": [
+            "university",
+            "museum",
+            "hospital",
+            "shop",
+            "personal",
+            "other"
+          ]
+        },
+        "number": {
+          "type": "string",
+          "pattern": "^[A-Z][0-9]{1,3}$"
+        },
+        "idb": { "type": "number" },
+        "edited": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/dateAtLocation" }
+        },
+        "abbreviation": {
+          "type": "object",
+          "properties": {
+            "full": {
+              "type": "string",
+              "maxLength": 50,
+              "minLength": 5
+            },
+            "text": {
+              "type": "string",
+              "maxLength": 5
+            }
+          }
+        }
+      },
+      "required": ["buildingType", "number", "idb", "edited", "abbreviation"]
+    },
+    "areaWithBuildings": {
+      "type": "object",
+      "properties": {
+        "text": { "type": "string" },
+        "building": { "$ref": "#/definitions/building" }
+      },
+      "required": ["text"]
+    },
+    "city": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "population": {
+          "type": "number",
+          "maximum": 8000000000
+        },
+        "microdisctrict": {
+          "anyOf": [
+            { "$ref": "#/definitions/areaWithBuildings" },
+            {
+              "properties": {
+                "street": { "$ref": "#/definitions/areaWithBuildings" },
+                "distanceFromCenter": { "type": "number" }
+              },
+              "required": ["street"]
+            }
+          ]
+        }
+      }
+    },
+    "waterBase": {
+      "type": "object",
+      "properties": {
+        "waterType": { "enum": ["river", "lake", "ocean"] },
+        "name": { "type": "string" }
+      },
+      "required": ["waterType", "name"]
+    },
+    "water": {
+      "oneOf": [
+        {
+          "allOf": [
+            { "$ref": "#/definitions/waterBase" },
+            {
+              "type": "object",
+              "properties": {
+                "length": { "type": "number" }
+              }
+            }
+          ]
+        },
+        {
+          "allOf": [
+            { "$ref": "#/definitions/waterBase" },
+            {
+              "type": "object",
+              "properties": {
+                "area": { "type": "number" }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "map": {
+      "type": "object",
+      "properties": {
+        "city": { "$ref": "#/definitions/city" },
+        "water": { "$ref": "#/definitions/water" }
+      },
+      "required": ["city"]
+    }
+  },
+  "required": ["map"]
+}

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://klevas.mif.vu.lt/~ryce6320" xmlns="http://klevas.mif.vu.lt/~ryce6320" xmlns:ns="http://klevas.mif.vu.lt/~ryce6320" elementFormDefault="qualified">
+    <xs:element name="map" type="Map">
+        <xs:key name="buildingKey">
+            <xs:selector xpath="city/microdisctrict/street/building"/>
+            <xs:field xpath="@id"/>
+        </xs:key>
+        <xs:keyref name="bookmarkRef" refer="buildingKey">
+            <xs:selector xpath="bookmarks/bookmark"/>
+            <xs:field xpath="@buildingId"/>
+        </xs:keyref>
+    </xs:element>
+
+    <xs:simpleType name="Name">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="50" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Edited">
+        <xs:list itemType="xs:date"/>
+    </xs:simpleType>
+
+    <xs:complexType name="Abbreviation">
+        <xs:simpleContent>
+            <xs:restriction base="LongAbbreviation">
+                <xs:maxLength value="10"></xs:maxLength>
+            </xs:restriction>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="LongAbbreviation">
+        <xs:simpleContent>
+            <xs:extension base="Name">
+                <xs:attribute name="full" type="Name"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="Building">
+        <xs:sequence>
+            <xs:element name="edited" type="Edited" />
+            <xs:choice>
+                <xs:element name="name" type="Name" />
+                <xs:element name="abbreviation" type="Abbreviation" />
+            </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="number" type="BuildingNumber"/>
+        <xs:attribute name="id" type="xs:string"/>
+    </xs:complexType>
+
+    <xs:complexType name="BuildingUnderConstruction">
+        <xs:complexContent>
+            <xs:restriction base="Building">
+                <xs:sequence>
+                    <xs:element name="edited" type="Edited" />
+                    <xs:choice>
+                        <xs:element name="name" type="Name" />
+                        <xs:element name="abbreviation" type="Abbreviation" />
+                    </xs:choice>
+                </xs:sequence>
+            </xs:restriction>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="City">
+        <xs:complexContent>
+            <xs:extension base="Microdisctrict">
+                <xs:sequence minOccurs="0">
+                    <xs:element name="microdisctrict" type="Microdisctrict"/>
+                </xs:sequence>
+                <xs:attribute name="population" type="xs:integer"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="Microdisctrict">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="street" type="Street" />
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string"/>
+    </xs:complexType>
+
+    <xs:complexType name="Street" mixed="true">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="building" type="Building"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string"/>
+    </xs:complexType>
+
+    <!-- <xs:simpleType name="BuildingNumber">
+        <xs:restriction base="xs:integer">
+            <xs:pattern value="[A-Z][0-9]{1}|[A-Z][0-9]{2}|[A-Z][0-9]{3}|[0-9]{1}|[0-9]{2}|[0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType> -->
+
+    <xs:simpleType name="BuildingNumber">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][0-9]{1}|[A-Z][0-9]{2}|[A-Z][0-9]{3}|[0-9]{1}|[0-9]{2}|[0-9]{3}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="Bookmarks">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="bookmark" type="Bookmark"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Bookmark">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="buildingId" type="xs:string"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="Map">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="city" type="City"/>
+            <xs:element name="bookmarks" type="Bookmarks"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

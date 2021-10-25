@@ -1,0 +1,40 @@
+{
+  "map": {
+    "city": {
+      "name": "Vilnius",
+      "population": 544386,
+      "microdisctrict": {
+        "text": "Naujamiestis",
+        "distanceFromCenter": 1245,
+        "street": {
+          "text": "Naugardukas",
+          "building": {
+            "buildingType": "university",
+            "number": "A24",
+            "idb": 1234,
+            "edited": [
+              { "myDate": "2019-01-04", "location": "LTU" },
+              { "myDate": "2019-02-24", "location": "LTU" },
+              { "myDate": "2019-08-09", "location": "EN" }
+            ],
+            "abbreviation": {
+              "full": "VU matematikos ir informatikos fakultetas",
+              "text": "MIF"
+            }
+          }
+        }
+      }
+    },
+    "water" : {
+      "waterType": "river",
+      "name": "Nemunas",
+      "length": "937"
+    },
+    "bookmarks": {
+      "bookmark": {
+        "buildingId": "1234",
+        "text": "myTestBookmark"
+      }
+    }
+  }
+}

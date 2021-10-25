@@ -1,0 +1,22 @@
+<map xmlns="http://klevas.mif.vu.lt/~ryce6320">
+    <city name="Vilnius" population="544386">
+        <microdisctrict name="Naujamiestis">
+            <street>
+                Naugardukas
+                <building number="A24" id="1234">
+                    <edited>
+                        2019-01-04
+                        2019-02-24
+                        2019-08-09
+                    </edited>
+                
+                    <abbreviation full="VU matematikos ir informatikos fakultetas">MIF</abbreviation>
+                </building>
+            </street>
+        </microdisctrict>
+    </city>
+
+    <bookmarks>
+        <bookmark buildingId="1234">myTestBookmark</bookmark>
+    </bookmarks>
+</map>
