@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://klevas.mif.vu.lt/~ryce6320" xmlns="http://klevas.mif.vu.lt/~ryce6320" xmlns:ns="http://klevas.mif.vu.lt/~ryce6320" elementFormDefault="qualified">
     <xs:element name="map" type="Map">
         <xs:key name="buildingKey">
             <xs:selector xpath="city/microdisctrict/street/building"/>
