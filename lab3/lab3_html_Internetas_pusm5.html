@@ -8,5 +8,16 @@
     </head>
     <body>
         <header></header>
+        <form>
+            <input required type="search"/>
+            <input required type="text" placeholder="Name" maxlength="50"/>
+            <input required type="text" placeholder="Surname" maxlength="50"/>
+            <input required type="email" placeholder="example@gmail.com"/>
+            <input type="tel" placeholder="phone number"/>
+            <input id="ccn" type="tel" pattern="[0-9\s]{13,19}" maxlength="19" placeholder="xxxx xxxx xxxx xxxx"/>
+            <input required type="password" pattern="[0-9]*" placeholder="cvv" maxlength="3"/>
+            
+            <button type="submit">Submit</button>
+        </form>
     </body>
 </html>

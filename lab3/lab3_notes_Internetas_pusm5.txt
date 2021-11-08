@@ -5,7 +5,7 @@ Reikia HTML
     <a>
     <table> su colspan ir rowspan
     <ul>/<ol>
-    <form> us 5 skirtingais tipais
+    * <form> us 5 skirtingais tipais
     <select>
 Reikia CSS
     Selectors
