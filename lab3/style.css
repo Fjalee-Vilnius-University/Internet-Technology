@@ -1,0 +1,14 @@
+input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+table {
+    width: 550px;
+    table-layout: fixed;
+}
+
+button {
+    width: 100%;
+    box-sizing: border-box;
+}

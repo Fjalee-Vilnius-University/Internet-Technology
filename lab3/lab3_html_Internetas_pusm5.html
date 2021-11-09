@@ -4,20 +4,42 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>e-shop</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./style.css">
     </head>
     <body>
         <header></header>
         <form>
-            <input required type="search"/>
-            <input required type="text" placeholder="Name" maxlength="50"/>
-            <input required type="text" placeholder="Surname" maxlength="50"/>
-            <input required type="email" placeholder="example@gmail.com"/>
-            <input type="tel" placeholder="phone number"/>
-            <input id="ccn" type="tel" pattern="[0-9\s]{13,19}" maxlength="19" placeholder="xxxx xxxx xxxx xxxx"/>
-            <input required type="password" pattern="[0-9]*" placeholder="cvv" maxlength="3"/>
-            
-            <button type="submit">Submit</button>
+            <table border="1">
+                <tr>
+                    <td colspan="2">
+                        <input required type="text" placeholder="Name" maxlength="50"/>
+                    </td>
+                    <td colspan="2">
+                        <input required type="text" placeholder="Surname" maxlength="50"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input required type="email" placeholder="example@gmail.com"/>
+                    </td colspan="2">
+                    <td colspan="2">
+                        <input type="tel" placeholder="phone number"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <input id="ccn" type="tel" pattern="[0-9\s]{13,19}" maxlength="19" placeholder="xxxx xxxx xxxx xxxx"/>
+                    </td>
+                    <td colspan="1">
+                        <input required type="password" pattern="[0-9]*" placeholder="cvv" maxlength="3"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <button type="submit">Submit</button>
+                    </td>
+                </tr>
+            </table>
         </form>
     </body>
 </html>

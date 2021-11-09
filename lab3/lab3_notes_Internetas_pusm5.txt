@@ -3,7 +3,9 @@ Reikia HTML
     <p>
     <img>
     <a>
-    <table> su colspan ir rowspan
+    * <table>
+        * colspan
+          rowspan
     <ul>/<ol>
     * <form> us 5 skirtingais tipais
     <select>
