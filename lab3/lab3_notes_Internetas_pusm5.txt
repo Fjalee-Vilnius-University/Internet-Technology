@@ -1,7 +1,7 @@
 Reikia HTML
     <section>
     <p>
-    <img>
+    * <img>
     * <a>
     * <table>
         * colspan
