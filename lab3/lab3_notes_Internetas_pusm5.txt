@@ -1,12 +1,12 @@
 Reikia HTML
-    <section>
-    <p>
+    * <section>
+    * <p>
     * <img>
     * <a>
     * <table>
         * colspan
         * rowspan
-    <ul>/<ol>
+    * <ul>/<ol>
     * <form> us 5 skirtingais tipais
     * <select>
 Reikia CSS

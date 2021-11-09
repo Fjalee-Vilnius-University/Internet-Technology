@@ -18,3 +18,7 @@ select {
     height: 100%;
     box-sizing: border-box;
 }
+
+p {
+    width: 60%;
+}
