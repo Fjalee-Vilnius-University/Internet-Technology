@@ -5,10 +5,10 @@ Reikia HTML
     * <a>
     * <table>
         * colspan
-          rowspan
+        * rowspan
     <ul>/<ol>
     * <form> us 5 skirtingais tipais
-    <select>
+    * <select>
 Reikia CSS
     Selectors
         Įpėdinio (descendant);
