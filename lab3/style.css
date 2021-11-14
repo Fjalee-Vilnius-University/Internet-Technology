@@ -1,7 +1,3 @@
-p {
-  width: 38%;
-}
-
 #order-registration-form table button,
 #order-registration-form table input,
 #order-registration-form table select {
@@ -24,4 +20,20 @@ button[href*="https://myApp"]
   color: red;
   word-wrap: normal;
   text-shadow: -1px 1px 0 palevioletred;
+}
+
+p,
+div{
+    font-size: 15px;
+}
+
+.fyi{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#information-for-speicific-customer{
+    width: 38%;
+        font-weight: inherit;
+    font-size: inherit;
 }
