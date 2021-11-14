@@ -48,4 +48,9 @@ nav > button {
 .registration-page {
   max-width: 500px;
   margin: auto;
+  padding: 30px;
+}
+
+.registration-page-decoration-img{
+    width: 500px;
 }
