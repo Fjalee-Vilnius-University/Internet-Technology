@@ -8,6 +8,11 @@
 #order-registration-form > table {
   width: 100%;
   table-layout: fixed;
+  background-color: red;
+}
+
+table.white-table{
+  background-color: white !important;
 }
 
 button[href*="https://myApp"]
