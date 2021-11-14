@@ -23,29 +23,29 @@ button[href*="https://myApp"]
 }
 
 p,
-div{
-    font-size: 15px;
+div {
+  font-size: 15px;
 }
 
-.fyi{
-    font-weight: bold;
-    font-size: 20px;
+.fyi {
+  font-weight: bold;
+  font-size: 20px;
 }
 
-#information-for-speicific-customer{
-    font-weight: inherit;
-    font-size: inherit;
+#information-for-speicific-customer {
+  font-weight: inherit;
+  font-size: inherit;
 }
 
-nav>button{
-    margin: 7px;
-    color: white;
-    padding: 5px 20px;
-    text-align: center;
-    font-size: 17px;
+nav > button {
+  margin: 7px;
+  color: white;
+  padding: 5px 20px;
+  text-align: center;
+  font-size: 17px;
 }
 
-.registration-page{
+.registration-page {
   max-width: 500px;
   margin: auto;
 }
