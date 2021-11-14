@@ -1,26 +1,27 @@
 p {
-    width: 38%;
+  width: 38%;
 }
 
 #order-registration-form table button,
 #order-registration-form table input,
-#order-registration-form table select{
-    width: 100%;
-    box-sizing: border-box;
+#order-registration-form table select {
+  width: 100%;
+  box-sizing: border-box;
 }
 
-#order-registration-form>table{
-    width: 550px;
-    table-layout: fixed;
+#order-registration-form > table {
+  width: 550px;
+  table-layout: fixed;
 }
 
-button[href*="https://myApp"]{
-    background-color: red;
-    color: white;
+button[href*="https://myApp"]
+{
+  background-color: red;
+  color: white;
 }
 
-.links{
-    color: red;
-    word-wrap: normal;
-    text-shadow:-1px 1px 0 palevioletred
+.links {
+  color: red;
+  word-wrap: normal;
+  text-shadow: -1px 1px 0 palevioletred;
 }
