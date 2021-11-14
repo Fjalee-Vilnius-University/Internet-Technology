@@ -33,8 +33,7 @@ div{
 }
 
 #information-for-speicific-customer{
-    width: 38%;
-        font-weight: inherit;
+    font-weight: inherit;
     font-size: inherit;
 }
 
@@ -44,4 +43,9 @@ nav>button{
     padding: 5px 20px;
     text-align: center;
     font-size: 17px;
+}
+
+.registration-page{
+  max-width: 500px;
+  margin: auto;
 }
