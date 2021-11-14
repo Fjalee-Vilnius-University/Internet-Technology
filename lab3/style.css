@@ -1,5 +1,5 @@
 p {
-    width: 60%;
+    width: 38%;
 }
 
 #order-registration-form table button,
@@ -17,4 +17,10 @@ p {
 button[href*="https://myApp"]{
     background-color: red;
     color: white;
+}
+
+.links{
+    color: red;
+    word-wrap: normal;
+    text-shadow:-1px 1px 0 palevioletred
 }
