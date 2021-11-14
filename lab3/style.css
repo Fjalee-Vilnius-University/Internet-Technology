@@ -1,24 +1,19 @@
-input {
-    width: 100%;
-    box-sizing: border-box;
-}
-
-table {
-    width: 550px;
-    table-layout: fixed;
-}
-
-button {
-    width: 100%;
-    box-sizing: border-box;
-}
-
 select {
     width: 100%;
-    height: 100%;
-    box-sizing: border-box;
 }
 
 p {
     width: 60%;
+}
+
+.registration-form table button,
+.registration-form table input,
+.registration-form table select{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.registration-form>table{
+    width: 550px;
+    table-layout: fixed;
 }

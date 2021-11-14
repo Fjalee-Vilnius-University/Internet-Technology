@@ -11,8 +11,8 @@ Reikia HTML
     * <select>
 Reikia CSS
     Selectors
-        Įpėdinio (descendant);
-        Vaiko (child);
+        * Įpėdinio (descendant);
+        * Vaiko (child);
         Atributo (attribute);
         Klasės (class);
         ID
