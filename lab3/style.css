@@ -17,3 +17,8 @@ p {
     width: 550px;
     table-layout: fixed;
 }
+
+button[href*="https://myApp"]{
+    background-color: red;
+    color: white;
+}
