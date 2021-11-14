@@ -37,3 +37,11 @@ div{
         font-weight: inherit;
     font-size: inherit;
 }
+
+nav>button{
+    margin: 7px;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    font-size: 17px;
+}
