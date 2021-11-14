@@ -1,19 +1,15 @@
-select {
-    width: 100%;
-}
-
 p {
     width: 60%;
 }
 
-.registration-form table button,
-.registration-form table input,
-.registration-form table select{
+#order-registration-form table button,
+#order-registration-form table input,
+#order-registration-form table select{
     width: 100%;
     box-sizing: border-box;
 }
 
-.registration-form>table{
+#order-registration-form>table{
     width: 550px;
     table-layout: fixed;
 }
