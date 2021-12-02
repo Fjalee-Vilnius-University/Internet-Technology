@@ -53,7 +53,7 @@
           </tr>
           <tr>
             <td colspan="2">
-              <input required type="text" placeholder="Name" maxlength="50" />
+              <input required type="text" placeholder="Name" onfocusout="validateNotBlank(this)"/>
             </td>
             <td colspan="2">
               <input
@@ -95,20 +95,33 @@
                 pattern="[0-9]*"
                 placeholder="cvv"
                 maxlength="3"
+                onfocusout="validatePosInteger(this)"
               />
             </td>
           </tr>
           <tr>
             <td colspan="5">
-              <button type="submit">Submit</button>
+              <input
+                required
+                type="text"
+                placeholder="Birth date"
+                maxlength="50"
+                onFocusOut="validateCorrectDate(this)"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="5">
+              <button type="submit" onclick="checkIfValid(this)">Submit</button>
             </td>
           </tr>
         </table>
       </form>
     </section>
-
     <footer>
       <a href="https://myApp/contacts.com" class="links">Contacts</a>
     </footer>
+    <!-- <script src="jquery-3.6.0.min.js"></script> -->
+    <script src="./lab4_javascript_Internetas_pusm5.js"></script>
   </body>
 </html>

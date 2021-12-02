@@ -85,3 +85,7 @@ div {
     border-radius: 5%;
   }
 }
+
+.invalid {
+  background-color: rgb(245, 193, 202);
+}
