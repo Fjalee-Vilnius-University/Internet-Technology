@@ -16,7 +16,7 @@ function validateCorrectDate(obj) {
   manageInvalid(isInvalid, obj);
   return isInvalid;
 }
-function validateSurname(obj){
+function validateSurname(obj) {
   const isInvalid = !isCorrectSurname(obj.value);
   showErrorMessage(isInvalid);
 }
@@ -70,26 +70,65 @@ function manageInvalid(isInvalid, obj) {
   }
 }
 
-function showErrorMessage(show){
+function showErrorMessage(show) {
   const errorMessageEl = $(".error-message");
-  if (!show){
-    errorMessageEl.css("display","none");
-  }
-  else{
-    errorMessageEl.css("display","block");
+  if (!show) {
+    errorMessageEl.css("display", "none");
+  } else {
+    errorMessageEl.css("display", "block");
   }
 }
 
-function changeWorkingHoursFontSize(change){
+function changeWorkingHoursFontSize(change) {
   workingHoursEl = $("#working-hours").children("ul");
   changeFontSize(workingHoursEl, change);
 }
 
-function changeFontSize(obj, change){
+function changeFontSize(obj, change) {
   elementToZoom = $("#working-hours").children("ul");
   currFontSize = elementToZoom.css("font-size");
   temp = parseInt(currFontSize, 10) + change;
   elementToZoom.css("font-size", temp);
+}
+
+function orderSubmitHandler(e) {
+  // const valid = validateOrderSubmit();
+  const valid = true;
+  if (valid) {
+    const form = $("#order-registration-form");
+    var url = "https://jsonblob.com/api/jsonBlob";
+
+    const temp = getFormDataJSON(form);
+    console.log(temp);
+
+    $.ajax({
+      url: url,
+      type: "POST",
+      dataType: 'json',
+      contentType: 'application/json',
+      data: JSON.stringify(temp),
+      complete: function (data) {
+        alert(data.getResponseHeader("Location"));
+      }
+    });
+    return false;
+  } else {
+    return false;
+  }
+}
+
+function temp(e){
+}
+
+function getFormDataJSON(form){
+  var unindexed_array = form.serializeArray();
+  var indexed_array = {};
+
+  $.map(unindexed_array, function(n, i){
+      indexed_array[n['name']] = n['value'];
+  });
+
+  return indexed_array;
 }
 
 document.addEventListener("DOMContentLoaded", function () {});
