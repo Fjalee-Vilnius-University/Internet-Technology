@@ -53,7 +53,7 @@ div {
     padding: 30px;
   }
 
-  nav > a.myButton {
+  a.myButton {
     background-color: red;
     border: none;
     color: white;
@@ -97,4 +97,8 @@ div {
 
 .no-margins{
   margin: 0px;
+}
+
+.margin-left-20{
+  margin-left: 20px;
 }

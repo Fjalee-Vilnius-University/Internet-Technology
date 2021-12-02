@@ -3,9 +3,9 @@ Formos laukų validavimas:
     * Įvedimo laukas, kuriame turi būti įvestas sveikas teigiamas skaičius
     * Įvedimo laukas (-ai), kuriame (-iuose) turi būti įvesta teisinga data (metai, mėnuo, diena) (pvz. vasaris negali turėti 30 dienų); būtina naudoti Date objektą
 HTML puslapio elementų paslėpimas/parodymas (ne išmetimas)
-    panaudojant CSS savybę display, priklausomai nuo to, kas įvesta kokiame nors formos lauke (būtina naudoti jQuery biblioteką);
+    * panaudojant CSS savybę display, priklausomai nuo to, kas įvesta kokiame nors formos lauke (būtina naudoti jQuery biblioteką);
 HTML puslapio dinaminis turinio modifikavimas (būtina naudoti jQuery biblioteką):
-    Egzistuojančių HTML dokumento žymių tekstinio turinio pakeitimas (pvz. paragrafo teksto pakeitimas)
+    * Egzistuojančių HTML dokumento žymių tekstinio turinio pakeitimas (pvz. paragrafo teksto pakeitimas)
     Egzistuojančių žymių stiliaus pakeitimas (atributui style priskiriant naują reikšmę)
     Egzistuojančių žymių išmetimas (pvz. ištrinti įvedimo lauke numeriu nurodytą paragrafą)
     Naujų žymių įterpimas (pvz. teksto gale pridėti paragrafą su tekstu, įvestu įvedimo lauke)

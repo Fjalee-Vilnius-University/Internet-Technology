@@ -30,8 +30,29 @@
         Sending services for private customers in Lithuania, the Baltic States
         and across Europe.
       </p>
-      <div>
-        Working hours:
+      <div id="working-hours">
+        <table>
+          <tr>
+
+          </tr>
+          <td>
+            Working hours
+          </td>
+          <td>
+            <div class="margin-left-20">
+              <a class="zoomInButton myButton"
+                role="button"
+                href="javascript:changeWorkingHoursFontSize(1)">
+                +
+              </a>
+              <a class="zoomOutButton myButton"
+                role="button"
+                href="javascript:changeWorkingHoursFontSize(-1)">
+                -
+              </a>
+            </div>
+          </td>
+        </table>
         <ul>
           <li>I-V 6:00-22:00</li>
           <li>VI 8:00-23:00</li>
@@ -42,8 +63,14 @@
 
     <section>
       <h3 class="no-margins" onclick="toggleErrorMessage()">Register</h3>
-      <p class="error-message no-margins" style="display: none;">Fix incorrect input fields</p>
-      <form name="order-registration-form" id="order-registration-form" onsubmit="return validateOrderSubmit()">
+      <p class="error-message no-margins" style="display: none">
+        Fix incorrect input fields
+      </p>
+      <form
+        name="order-registration-form"
+        id="order-registration-form"
+        onsubmit="return validateOrderSubmit()"
+      >
         <table class="white-table">
           <tr>
             <td></td>
@@ -54,7 +81,12 @@
           </tr>
           <tr>
             <td colspan="2">
-              <input name="name" type="text" placeholder="Name" onfocusout="validateNotBlank(this)"/>
+              <input
+                name="name"
+                type="text"
+                placeholder="Name"
+                onfocusout="validateNotBlank(this)"
+              />
             </td>
             <td colspan="2">
               <input
@@ -103,7 +135,7 @@
           <tr>
             <td colspan="5">
               <input
-                name="birthDate" 
+                name="birthDate"
                 type="text"
                 placeholder="Birth date"
                 maxlength="50"

@@ -80,4 +80,16 @@ function showErrorMessage(show){
   }
 }
 
+function changeWorkingHoursFontSize(change){
+  workingHoursEl = $("#working-hours").children("ul");
+  changeFontSize(workingHoursEl, change);
+}
+
+function changeFontSize(obj, change){
+  elementToZoom = $("#working-hours").children("ul");
+  currFontSize = elementToZoom.css("font-size");
+  temp = parseInt(currFontSize, 10) + change;
+  elementToZoom.css("font-size", temp);
+}
+
 document.addEventListener("DOMContentLoaded", function () {});
