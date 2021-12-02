@@ -4,14 +4,30 @@
 function validateNotBlank(obj) {
   const isInvalid = isBlank(obj.value);
   manageInvalid(isInvalid, obj);
+  return !isInvalid;
 }
 function validatePosInteger(obj) {
   const isInvalid = !isPosInt(obj.value);
   manageInvalid(isInvalid, obj);
+  return !isInvalid;
 }
 function validateCorrectDate(obj) {
   const isInvalid = !isCorrectDate(obj.value);
   manageInvalid(isInvalid, obj);
+  return isInvalid;
+}
+function validateOrderSubmit() {
+  const nameEl = document.forms["order-registration-form"]["name"];
+  const cvvEl = document.forms["order-registration-form"]["cvv"];
+  const birthDateEl = document.forms["order-registration-form"]["birthDate"];
+
+  const validName = validateNotBlank(nameEl);
+  const validCvv = validatePosInteger(cvvEl);
+  const validBirthDate = validateCorrectDate(birthDateEl);
+  if (!validName || !validCvv || !validBirthDate) {
+    alert("fix invalid fields");
+    return false;
+  }
 }
 
 function isPosInt(val) {

@@ -1,7 +1,7 @@
 Formos laukų validavimas:
-    Įvedimo laukas, kuriame kažkas turi būti įvesta (kuris negali būti paliktas tuščias)
-    Įvedimo laukas, kuriame turi būti įvestas sveikas teigiamas skaičius
-    Įvedimo laukas (-ai), kuriame (-iuose) turi būti įvesta teisinga data (metai, mėnuo, diena) (pvz. vasaris negali turėti 30 dienų); būtina naudoti Date objektą
+    * Įvedimo laukas, kuriame kažkas turi būti įvesta (kuris negali būti paliktas tuščias)
+    * Įvedimo laukas, kuriame turi būti įvestas sveikas teigiamas skaičius
+    * Įvedimo laukas (-ai), kuriame (-iuose) turi būti įvesta teisinga data (metai, mėnuo, diena) (pvz. vasaris negali turėti 30 dienų); būtina naudoti Date objektą
 HTML puslapio elementų paslėpimas/parodymas (ne išmetimas)
     panaudojant CSS savybę display, priklausomai nuo to, kas įvesta kokiame nors formos lauke (būtina naudoti jQuery biblioteką);
 HTML puslapio dinaminis turinio modifikavimas (būtina naudoti jQuery biblioteką):
