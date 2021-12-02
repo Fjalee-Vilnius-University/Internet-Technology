@@ -42,7 +42,7 @@
 
     <section>
       <h3>Register</h3>
-      <form id="order-registration-form">
+      <form name="order-registration-form" id="order-registration-form" onsubmit="return validateOrderSubmit()">
         <table class="white-table">
           <tr>
             <td></td>
@@ -53,11 +53,10 @@
           </tr>
           <tr>
             <td colspan="2">
-              <input required type="text" placeholder="Name" onfocusout="validateNotBlank(this)"/>
+              <input name="name" type="text" placeholder="Name" onfocusout="validateNotBlank(this)"/>
             </td>
             <td colspan="2">
               <input
-                required
                 type="text"
                 placeholder="Surname"
                 maxlength="50"
@@ -72,7 +71,7 @@
           </tr>
           <tr>
             <td colspan="2">
-              <input required type="email" placeholder="example@gmail.com" />
+              <input type="email" placeholder="example@gmail.com" />
             </td>
             <td colspan="2">
               <input type="tel" placeholder="phone number" />
@@ -90,7 +89,7 @@
             </td>
             <td colspan="1">
               <input
-                required
+                name="cvv"
                 type="password"
                 pattern="[0-9]*"
                 placeholder="cvv"
@@ -102,7 +101,7 @@
           <tr>
             <td colspan="5">
               <input
-                required
+                name="birthDate" 
                 type="text"
                 placeholder="Birth date"
                 maxlength="50"
@@ -112,7 +111,7 @@
           </tr>
           <tr>
             <td colspan="5">
-              <button type="submit" onclick="checkIfValid(this)">Submit</button>
+              <button type="submit">Submit</button>
             </td>
           </tr>
         </table>
