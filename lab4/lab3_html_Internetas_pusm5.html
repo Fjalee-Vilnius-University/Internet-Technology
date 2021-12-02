@@ -41,7 +41,8 @@
     </section>
 
     <section>
-      <h3>Register</h3>
+      <h3 class="no-margins" onclick="toggleErrorMessage()">Register</h3>
+      <p class="error-message no-margins" style="display: none;">Fix incorrect input fields</p>
       <form name="order-registration-form" id="order-registration-form" onsubmit="return validateOrderSubmit()">
         <table class="white-table">
           <tr>
@@ -60,6 +61,7 @@
                 type="text"
                 placeholder="Surname"
                 maxlength="50"
+                onfocusout="validateSurname(this)"
               />
             </td>
             <td colspan="1" rowspan="2">
@@ -120,7 +122,7 @@
     <footer>
       <a href="https://myApp/contacts.com" class="links">Contacts</a>
     </footer>
-    <!-- <script src="jquery-3.6.0.min.js"></script> -->
+    <script src="jquery-3.6.0.min.js"></script>
     <script src="./lab4_javascript_Internetas_pusm5.js"></script>
   </body>
 </html>

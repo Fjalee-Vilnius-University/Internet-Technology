@@ -89,3 +89,12 @@ div {
 .invalid {
   background-color: rgb(245, 193, 202);
 }
+
+.error-message{
+  color: red;
+  background-color: rgb(245, 193, 202);
+}
+
+.no-margins{
+  margin: 0px;
+}

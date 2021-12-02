@@ -16,6 +16,10 @@ function validateCorrectDate(obj) {
   manageInvalid(isInvalid, obj);
   return isInvalid;
 }
+function validateSurname(obj){
+  const isInvalid = !isCorrectSurname(obj.value);
+  showErrorMessage(isInvalid);
+}
 function validateOrderSubmit() {
   const nameEl = document.forms["order-registration-form"]["name"];
   const cvvEl = document.forms["order-registration-form"]["cvv"];
@@ -50,12 +54,29 @@ function isCorrectDate(val) {
     return false;
   }
 }
+function isCorrectSurname(val) {
+  if (val.length >= 2) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 function manageInvalid(isInvalid, obj) {
   if (isInvalid) {
     obj.classList.add("invalid");
   } else {
     obj.classList.remove("invalid");
+  }
+}
+
+function showErrorMessage(show){
+  const errorMessageEl = $(".error-message");
+  if (!show){
+    errorMessageEl.css("display","none");
+  }
+  else{
+    errorMessageEl.css("display","block");
   }
 }
 
