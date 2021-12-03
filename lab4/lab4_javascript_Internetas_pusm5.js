@@ -108,11 +108,17 @@ function orderSubmitHandler() {
       data: JSON.stringify(jsonData),
       complete: function (data) {
         blobId = getBlobId(data.getResponseHeader("Location"));
+        makeNewestButtonRegular();
         $("#review-order-section").append(buttonForOrderReview(blobId));
       }
     });
   }
   return false;
+}
+
+function makeNewestButtonRegular(){
+  $(".newest-button").removeAttr("style");
+  $(".newest-button").removeClass("newest-button");
 }
 
 function getBlobId(blobGetPath){
@@ -160,14 +166,15 @@ function putShowOrderDataIntoTable(order){
 }
 
 function buttonForOrderReview(blobId){
-  const className = ' class="review-order-button myButton" ';
+  const className = ' class="newest-button review-order-button myButton" ';
   const role = ' role="button" ';
   const id = ' id="review-order-button-' + blobId + '" ';
   const href = ' href="javascript:showOrder(' + "'" + blobId + "'" + ')" ';
   const body = 'order #' + blobId;
+  const style = ' style="background-color: green;" ';
 
   const result =
-    "<a " + className + role+ id+ href + " > " + 
+    "<a " + className + role + id + href + style + " > " + 
     body + 
     " </a>";
 
