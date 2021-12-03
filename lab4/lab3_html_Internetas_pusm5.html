@@ -69,7 +69,7 @@
       <form
         name="order-registration-form"
         id="order-registration-form"
-        onsubmit="return orderSubmitHandler(this)"
+        onsubmit="return orderSubmitHandler()"
       >
         <table class="white-table">
           <tr>
@@ -90,6 +90,7 @@
             </td>
             <td colspan="2">
               <input
+                name="surname"
                 type="text"
                 placeholder="Surname"
                 maxlength="50"
@@ -105,15 +106,16 @@
           </tr>
           <tr>
             <td colspan="2">
-              <input type="email" placeholder="example@gmail.com" />
+              <input name="email" type="email" placeholder="example@gmail.com" />
             </td>
             <td colspan="2">
-              <input type="tel" placeholder="phone number" />
+              <input name="tel" type="tel" placeholder="phone number" />
             </td>
           </tr>
           <tr>
             <td colspan="4">
               <input
+                name="ccn" 
                 id="ccn"
                 type="tel"
                 pattern="[0-9\s]{13,19}"
@@ -123,6 +125,7 @@
             </td>
             <td colspan="1">
               <input
+                name="cvv" 
                 name="cvv"
                 type="password"
                 pattern="[0-9]*"
@@ -150,6 +153,9 @@
           </tr>
         </table>
       </form>
+    </section>
+    <section class="margin-top-40" id="review-order-section">
+      
     </section>
     <footer>
       <a href="https://myApp/contacts.com" class="links">Contacts</a>

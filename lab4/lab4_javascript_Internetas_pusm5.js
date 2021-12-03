@@ -91,33 +91,33 @@ function changeFontSize(obj, change) {
   elementToZoom.css("font-size", temp);
 }
 
-function orderSubmitHandler(e) {
+function orderSubmitHandler() {
   // const valid = validateOrderSubmit();
   const valid = true;
   if (valid) {
     const form = $("#order-registration-form");
     var url = "https://jsonblob.com/api/jsonBlob";
 
-    const temp = getFormDataJSON(form);
-    console.log(temp);
+    const jsonData = getFormDataJSON(form);
+    let blobId;
 
     $.ajax({
       url: url,
       type: "POST",
-      dataType: 'json',
       contentType: 'application/json',
-      data: JSON.stringify(temp),
+      data: JSON.stringify(jsonData),
       complete: function (data) {
-        alert(data.getResponseHeader("Location"));
+        blobId = getBlobId(data.getResponseHeader("Location"));
+        $("#review-order-section").append(buttonForOrderReview(blobId));
       }
     });
-    return false;
-  } else {
-    return false;
   }
+  return false;
 }
 
-function temp(e){
+function getBlobId(blobGetPath){
+  const splitArray = blobGetPath.split('/');
+  return splitArray[splitArray.length-1];
 }
 
 function getFormDataJSON(form){
@@ -129,6 +129,37 @@ function getFormDataJSON(form){
   });
 
   return indexed_array;
+}
+
+function getJsonFromBlobApi(blobId){
+  const url = "https://jsonblob.com/api/jsonBlob/" + blobId;
+  $.ajax({
+    url: url,
+    type: "GET",
+    dataType: 'json',
+    complete: function (response) {
+      return response.responseJSON;
+    }
+  });
+}
+
+function showOrder(blobId){
+  const orderDate = getJsonFromBlobApi(blobId);
+}
+
+function buttonForOrderReview(blobId){
+  const className = 'class="myButton"';
+  const role = 'role="button"';
+  const id = 'id="review-order-button"';
+  const href = 'href="javascript:showOrder(' + "'" + blobId + "'" + ')"';
+  const body = 'order #' + blobId;
+
+  const result =
+    "<a " + className + " " + role + " " + id + " " + href + " > " + 
+    body + 
+    " </a>";
+
+  return result 
 }
 
 document.addEventListener("DOMContentLoaded", function () {});
