@@ -111,9 +111,9 @@ div {
   margin-top: 40px;
 }
 
-#review-order-button {
-  display: block;
-  margin: 5px;
+.review-order-button {
+  display: block !important;
+  margin: 5px !important;
 }
 
 #review-order-table td{

@@ -140,8 +140,13 @@ function showOrder(blobId){
     complete: function (response) {
       const order = response.responseJSON;
       putShowOrderDataIntoTable(order);
+      deleteShowOrderButton(blobId);
     }
   });
+}
+
+function deleteShowOrderButton(id){
+  $("#review-order-button-" + id).remove();
 }
 
 function putShowOrderDataIntoTable(order){
@@ -155,14 +160,14 @@ function putShowOrderDataIntoTable(order){
 }
 
 function buttonForOrderReview(blobId){
-  const className = 'class="myButton"';
-  const role = 'role="button"';
-  const id = 'id="review-order-button"';
-  const href = 'href="javascript:showOrder(' + "'" + blobId + "'" + ')"';
+  const className = ' class="review-order-button myButton" ';
+  const role = ' role="button" ';
+  const id = ' id="review-order-button-' + blobId + '" ';
+  const href = ' href="javascript:showOrder(' + "'" + blobId + "'" + ')" ';
   const body = 'order #' + blobId;
 
   const result =
-    "<a " + className + " " + role + " " + id + " " + href + " > " + 
+    "<a " + className + role+ id+ href + " > " + 
     body + 
     " </a>";
 
