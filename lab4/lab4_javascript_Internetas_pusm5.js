@@ -92,7 +92,7 @@ function changeFontSize(obj, change) {
 }
 
 function orderSubmitHandler() {
-  // const valid = validateOrderSubmit();
+  const valid = validateOrderSubmit();
   const valid = true;
   if (valid) {
     const form = $("#order-registration-form");
