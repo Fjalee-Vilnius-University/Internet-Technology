@@ -8,7 +8,7 @@ HTML puslapio dinaminis turinio modifikavimas (būtina naudoti jQuery bibliotek�
     * Egzistuojančių HTML dokumento žymių tekstinio turinio pakeitimas (pvz. paragrafo teksto pakeitimas)
     Egzistuojančių žymių stiliaus pakeitimas (atributui style priskiriant naują reikšmę)
     Egzistuojančių žymių išmetimas (pvz. ištrinti įvedimo lauke numeriu nurodytą paragrafą)
-    Naujų žymių įterpimas (pvz. teksto gale pridėti paragrafą su tekstu, įvestu įvedimo lauke)
+    * Naujų žymių įterpimas (pvz. teksto gale pridėti paragrafą su tekstu, įvestu įvedimo lauke)
 Asinchroninis komunikavimas su nutolusiu serveriu http://myjson.com/api https://jsonblob.com/api:
     * Įvedimo formoje pateiktų duomenų serializavimas JSON formatu ir patalpinimas vienoje iš šių sistemų (naudojantis pateikiamu API):
     * Duomenų (JSON formatu) išsitraukimas iš aukščiau nurodytų sistemų
