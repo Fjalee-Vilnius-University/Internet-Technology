@@ -131,20 +131,27 @@ function getFormDataJSON(form){
   return indexed_array;
 }
 
-function getJsonFromBlobApi(blobId){
+function showOrder(blobId){
   const url = "https://jsonblob.com/api/jsonBlob/" + blobId;
   $.ajax({
     url: url,
     type: "GET",
     dataType: 'json',
     complete: function (response) {
-      return response.responseJSON;
+      const order = response.responseJSON;
+      putShowOrderDataIntoTable(order);
     }
   });
 }
 
-function showOrder(blobId){
-  const orderDate = getJsonFromBlobApi(blobId);
+function putShowOrderDataIntoTable(order){
+  $("#review-order-table__name").text(order.name);
+  $("#review-order-table__surname").text(order.surname);
+  $("#review-order-table__email").text(order.email);
+  $("#review-order-table__tel").text(order.tel);
+  $("#review-order-table__birthDate").text(order.birthDate);
+  $("#review-order-table__ccn").text(order.ccn);
+  $("#review-order-table__cvv").text(order.cvv);
 }
 
 function buttonForOrderReview(blobId){

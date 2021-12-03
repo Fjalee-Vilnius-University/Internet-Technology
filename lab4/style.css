@@ -1,6 +1,6 @@
-#order-registration-form table button,
-#order-registration-form table input,
-#order-registration-form table select {
+table button,
+table input,
+table select{
   width: 100%;
   box-sizing: border-box;
 }
@@ -107,7 +107,29 @@ div {
   margin-top: 40px;
 }
 
+  .margin-top-20 {
+  margin-top: 40px;
+}
+
 #review-order-button {
   display: block;
   margin: 5px;
+}
+
+#review-order-table td{
+  height: 25px;
+  box-sizing: border-box;
+  border: 2px solid black;
+  overflow: hidden;
+}
+
+#review-order-table__name{
+  width: 200px;
+}
+#review-order-table__surname{
+  width: 200px;
+
+}
+#review-order-table__pref{
+  width: 50px;
 }
