@@ -1,0 +1,135 @@
+table button,
+table input,
+table select{
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#order-registration-form > table {
+  width: 100%;
+  table-layout: fixed;
+  background-color: red;
+}
+
+table.white-table {
+  background-color: white !important;
+}
+
+button[href*="https://myApp"]
+{
+  background-color: red;
+  color: white;
+}
+
+.links {
+  color: red;
+  word-wrap: normal;
+  text-shadow: -1px 1px 0 palevioletred;
+}
+
+p,
+div {
+  font-size: 15px;
+}
+
+.fyi {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#information-for-speicific-customer {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.registration-page-decoration-img {
+  width: 100%;
+}
+
+@media only screen and (min-width: 320px) {
+  .registration-page {
+    max-width: 400px;
+    margin: auto;
+    padding: 30px;
+  }
+
+  a.myButton {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 7px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .registration-page {
+    max-width: 500px;
+    margin: auto;
+    padding: 30px;
+  }
+
+  nav > a.myButton {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5%;
+  }
+}
+
+.invalid {
+  background-color: rgb(245, 193, 202);
+}
+
+.error-message {
+  color: red;
+  background-color: rgb(245, 193, 202);
+}
+
+.no-margins {
+  margin: 0px;
+}
+
+.margin-left-20 {
+  margin-left: 20px;
+}
+
+.margin-top-40 {
+  margin-top: 40px;
+}
+
+  .margin-top-20 {
+  margin-top: 40px;
+}
+
+.review-order-button {
+  display: block !important;
+  margin: 5px !important;
+}
+
+#review-order-table td{
+  height: 25px;
+  box-sizing: border-box;
+  border: 2px solid black;
+  overflow: hidden;
+}
+
+#review-order-table__name{
+  width: 200px;
+}
+#review-order-table__surname{
+  width: 200px;
+
+}
+#review-order-table__pref{
+  width: 50px;
+}
