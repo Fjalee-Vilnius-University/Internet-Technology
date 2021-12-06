@@ -32,6 +32,7 @@ function validateOrderSubmit() {
     alert("fix invalid fields");
     return false;
   }
+  return true;
 }
 
 function isPosInt(val) {
