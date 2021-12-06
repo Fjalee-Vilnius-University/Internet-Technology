@@ -14,7 +14,6 @@ function validatePosInteger(obj) {
 function validateCorrectDate(obj) {
   const isInvalid = !isCorrectDate(obj.value);
   manageInvalid(isInvalid, obj);
-  console.log("yes " + isInvalid);
   return !isInvalid;
 }
 function validateSurname(obj) {
@@ -29,7 +28,6 @@ function validateOrderSubmit() {
   const validName = validateNotBlank(nameEl);
   const validCvv = validatePosInteger(cvvEl);
   const validBirthDate = validateCorrectDate(birthDateEl);
-  console.log(validName +" "+ validCvv +" "+ validBirthDate);
   if (!validName || !validCvv || !validBirthDate) {
     alert("fix invalid fields");
     return false;
