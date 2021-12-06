@@ -93,7 +93,6 @@ function changeFontSize(obj, change) {
 
 function orderSubmitHandler() {
   const valid = validateOrderSubmit();
-  const valid = true;
   if (valid) {
     const form = $("#order-registration-form");
     var url = "https://jsonblob.com/api/jsonBlob";
